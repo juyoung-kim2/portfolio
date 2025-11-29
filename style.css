@@ -406,7 +406,7 @@ header.scrolled .sub_header_container .mode_icon div img {
 }
 
 .main_visual .main_visual_wrap p {
-  font-size: 24px;
+  font-size: var(--font-size-subtitle);
   font-weight: var(--font-weight-regular);
   text-align: center;
 }
@@ -470,6 +470,7 @@ header.scrolled .sub_header_container .mode_icon div img {
   display: flex;
   align-items: center;
   gap: 16px;
+  flex-wrap: wrap;
 }
 
 .about_section .about_top .about_top_container .right_wrap .skill_group li {
@@ -726,13 +727,15 @@ header.scrolled .sub_header_container .mode_icon div img {
 .portfolio_section .portfolio_container .portfolio_item .text_wrap {
   background: var(--box-color);
   padding: 30px;
-  padding-right: 80px;
+  padding-right: 82px;
+  height:100%;
 }
 
 .portfolio_section .portfolio_container .portfolio_item .text_wrap h4 {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-semibold);
   margin-bottom: 20px;
+  white-space: nowrap;
 }
 
 .portfolio_section .portfolio_container .portfolio_item .text_wrap p {
@@ -933,9 +936,15 @@ header.scrolled .sub_header_container .mode_icon div img {
   left: 0;
   width: 100%;
   background: var(--text-color);
-  transition: 0.3s; opacity: 0;
+  transition: 0.3s;
+  opacity: 0;
 }
-.fix_bar.active { bottom:0; opacity: 1;}
+
+.fix_bar.active {
+  bottom: 0;
+  opacity: 1;
+}
+
 .fix_bar .bar_container {
   max-width: 1200px;
   margin: 0 auto;
@@ -987,7 +996,7 @@ header.scrolled .sub_header_container .mode_icon div img {
   position: relative;
 }
 
-.fix_bar .bar_container .right_wrap .list_btn > a > span {
+.fix_bar .bar_container .right_wrap .list_btn>a>span {
   display: block;
   width: 20px;
   height: 2px;
@@ -997,7 +1006,13 @@ header.scrolled .sub_header_container .mode_icon div img {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.fix_bar .bar_container .right_wrap .list_btn > a {display: block; width: 100%; height: 100%;}
+
+.fix_bar .bar_container .right_wrap .list_btn>a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .fix_bar .bar_container .right_wrap .list_btn>a>span:nth-child(1) {
   margin-top: -6px;
 }
@@ -1161,7 +1176,7 @@ section .more_btn {
   font-size: 14px;
 }
 
-section .more_btn > a {
+section .more_btn>a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1195,4 +1210,156 @@ section .more_btn:hover {
 
 section .more_btn:hover img {
   filter: invert(0.3);
+}
+
+/* =======================
+    반응형
+======================= */
+@media (max-width: 1400px) {
+  :root {
+    --font-size-title-lg: 60px;
+    --font-size-title-md: 40px;
+    --font-size-subtitle: 28px;
+    --font-size-lg: 18px;
+    --font-size-md: 16px;
+  }
+
+  .main_visual .main_visual_wrap .main_visual_title .change_words {
+    height: 80px;
+  }
+
+  .about_section,
+  .portfolio_section {
+    max-width: 1200px;
+  }
+
+  .about_section .career_container .career_wrap .career_list .more_btn {
+    left: 172px;
+  }
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --font-size-title-lg: 52px;
+  }
+
+  .main_visual .main_visual_wrap .main_visual_title .change_words {
+    height: 64px;
+  }
+
+  .about_section,
+  .portfolio_section {
+    max-width: 1000px;
+  }
+
+  .about_section .career_container .career_wrap .career_list::after {
+    top: 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --font-size-title-lg: 48px;
+    --font-size-title-md: 34px;
+    --font-size-subtitle: 24px;
+    --font-size-lg: 17px;
+    --font-size-md: 15px;
+  }
+
+  .about_section,
+  .portfolio_section {
+    max-width: 90%;
+    padding: 0 20px;
+  }
+
+  .about_section .about_top .about_top_container .right_wrap {
+    padding: 50px 30px;
+  }
+
+  .portfolio_section .portfolio_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about_section .career_container .career_wrap .career_list .more_btn {
+    left: 160px;
+  }
+
+  .about_section .career_container .career_wrap .career_list::after {
+    top: 12px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .main_visual .main_visual_wrap .main_visual_title {
+    flex-direction: column;
+    gap: 0;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .about_section,
+  .portfolio_section {
+    max-width: 90%;
+    padding: 0 20px;
+  }
+.main_visual .main_visual_wrap p {font-size: 20px;}
+  .about_section .about_top .about_top_container {
+    flex-direction: column;
+  }
+.about_section .about_top .about_top_container .right_wrap h4 {font-size: 20px;}
+  .about_section .about_top .about_top_container .left_wrap {
+    width: 50%;
+  }
+
+  .about_section .about_top .about_top_container .right_wrap {
+    width: 90%;
+  }
+.about_section .about_top .about_top_container .right_wrap .skill_group {gap: 10px;}
+  .about_section .career_container .career_wrap .career_list::before {
+    left: -70px;
+  }
+.about_section .career_container .career_wrap .career_list::after {top: 10px;}
+  .about_section .career_container .career_wrap .career_list::after {
+    left: -76px
+  }
+
+  .about_section .career_container .career_wrap .career_list {
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 40px;
+  }
+.about_section .career_container .career_wrap .career_list .list_group .list_item.show {margin-bottom: 20px;}
+.about_section .career_container .career_wrap .career_list .list_group {padding-bottom: 20px;}
+.about_section .career_container .career_wrap .career_list .list_group .list_item h5 {margin-bottom: 10px;}
+  .about_section .career_container .career_wrap .career_list .more_btn {
+    left: 0;
+  }
+  .about_section .career_container .career_wrap .career_list::before {height:calc(100% + 37px);}
+  .portfolio_section .portfolio_container {gap: 20px; row-gap: 60px;}
+}
+
+@media (max-width: 600px) {
+  .portfolio_section .portfolio_container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media (max-width: 480px) {
+  :root {
+    --font-size-title-lg: 32px;
+    --font-size-title-md: 24px;
+    --font-size-subtitle: 20px;
+    --font-size-lg: 15px;
+    --font-size-md: 14px;
+  }
+
+  .about_section,
+  .portfolio_section {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  .about_section .career_container .career_wrap .career_list::before {width: 2px;}
+  .about_section .career_container .career_wrap{padding-left: 60px;}
+  .about_section .career_container .career_wrap .career_list::before {width: 2px; left: -40px; top: 22px;}
+  .about_section .career_container .career_wrap .career_list::after {left: -46px;}
 }
