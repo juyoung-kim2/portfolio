@@ -77,6 +77,9 @@ img {
 }
 
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: var(--font-family);
@@ -94,6 +97,7 @@ h3,
   font-family: 'Playfair Display', serif;
 }
 
+/*다크모드*/
 body.dark-mode {
   --primary-color: #D6B848;
   --box-color: #2E2E2E;
@@ -265,15 +269,49 @@ header.scrolled .sub_header_container .mode_icon div img {
   filter: invert(0);
 }
 
-.animate {
-  transform: translateY(300px);
+.fade-in {
   opacity: 0;
-  transition: transform 2s ease, opacity 2s ease;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-.animate.on {
-  transform: translateY(0);
+.fade-in.show {
   opacity: 1;
+  transform: translateY(0);
+}
+
+/*모바일 사이드 메뉴*/
+/* 모바일 네비게이션 기본 숨김 */
+.mobile_nav {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100vh;
+  background: rgba(255, 255, 255, 1);
+  padding-top: 120px;
+  transition: 0.3s ease;
+  z-index: 998;
+}
+
+.mobile_nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile_nav ul li {
+  padding: 15px 20px;
+}
+
+.mobile_nav ul li a {
+  color: var(--text-color);
+  font-size: 18px;
+}
+
+/* 열릴 때 */
+.mobile_nav.active {
+  right: 0;
 }
 
 .main_visual {
@@ -1420,18 +1458,40 @@ section .more_btn:hover img {
   .portfolio_section .portfolio_container {
     grid-template-columns: repeat(1, 1fr);
   }
-    .about_section .career_container .conpany_info {
+
+  .about_section .career_container .conpany_info {
     display: flex;
   }
-  .about_section .career_container .conpany_info .info_title {flex-direction: column; width: 30%; padding: 14px 20px; gap: 20px;
-  border-bottom: none; border-right: 1px solid #ddd;}
-    .about_section .career_container .conpany_info .info_title > li {width: 100%; text-align: left;}
-    .about_section .career_container .conpany_info .info_content {
-      flex-direction: column;
-      width: 70%; padding: 14px 20px; gap: 20px;
-    }
-    .about_section .career_container .conpany_info .info_content > li{width: 100%; text-align: left;}
-    .main_visual .main_visual_wrap .main_visual_title .change_words {max-width: 400px;}
+
+  .about_section .career_container .conpany_info .info_title {
+    flex-direction: column;
+    width: 30%;
+    padding: 14px 20px;
+    gap: 20px;
+    border-bottom: none;
+    border-right: 1px solid #ddd;
+  }
+
+  .about_section .career_container .conpany_info .info_title>li {
+    width: 100%;
+    text-align: left;
+  }
+
+  .about_section .career_container .conpany_info .info_content {
+    flex-direction: column;
+    width: 70%;
+    padding: 14px 20px;
+    gap: 20px;
+  }
+
+  .about_section .career_container .conpany_info .info_content>li {
+    width: 100%;
+    text-align: left;
+  }
+
+  .main_visual .main_visual_wrap .main_visual_title .change_words {
+    max-width: 400px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1448,8 +1508,17 @@ section .more_btn:hover img {
     max-width: 100%;
     padding: 0 20px;
   }
-.about_section .about_top .about_top_container .left_wrap {width:70%; margin-top: 40px;}
-.about_section .about_top .about_top_container .right_wrap .skill_group li {width:70px;height: 70px;}
+
+  .about_section .about_top .about_top_container .left_wrap {
+    width: 70%;
+    margin-top: 40px;
+  }
+
+  .about_section .about_top .about_top_container .right_wrap .skill_group li {
+    width: 70px;
+    height: 70px;
+  }
+
   .about_section .career_container .career_wrap .career_list::before {
     width: 2px;
   }
@@ -1471,6 +1540,7 @@ section .more_btn:hover img {
   header .header_container .mode_icon>div:not(.ham_menu) {
     display: none;
   }
+
   .main_visual .main_visual_wrap .main_visual_title .change_words {
     max-width: 90%;
   }
