@@ -104,12 +104,27 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /*모바일 사이드 메뉴*/
-const hamBtn = document.querySelector(".ham_container");
+const hamOpen = document.querySelector("#ham_open");   // 열기
+const hamClose = document.querySelector("#ham_close"); // 닫기
 const mobileNav = document.querySelector(".mobile_nav");
+const overlay = document.querySelector(".overlay");
 
-hamBtn.addEventListener("click", () => {
-  hamBtn.classList.toggle("active");
-  mobileNav.classList.toggle("active");
+// 열기 버튼 클릭
+hamOpen.addEventListener("click", () => {
+  mobileNav.classList.add("active");
+  overlay.classList.add("active");
+});
+
+// 닫기 버튼 클릭
+hamClose.addEventListener("click", () => {
+  mobileNav.classList.remove("active");
+  overlay.classList.remove("active");
+});
+
+// 오버레이 클릭 → 닫기
+overlay.addEventListener("click", () => {
+  mobileNav.classList.remove("active");
+  overlay.classList.remove("active");
 });
 
 /*스크롤 헤더 높이 감지*/

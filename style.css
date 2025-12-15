@@ -143,7 +143,7 @@ header .header_container .mode_icon div.ham_menu .ham_container {
 
 header .header_container .mode_icon div.ham_menu .ham_container .bar {
   display: block;
-  width: 80%;
+  width: 22px;
   height: 2px;
   background-color: #000;
   position: absolute;
@@ -188,7 +188,7 @@ header {
   top: 0;
   left: 0;
   height: 100px;
-  z-index: 999;
+  z-index: 800;
 }
 
 header .header_container {
@@ -288,32 +288,99 @@ header.scrolled .sub_header_container .mode_icon div img {
   right: -300px;
   width: 300px;
   height: 100vh;
-  background: rgba(255, 255, 255, 1);
-  padding-top: 120px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  box-shadow: -4px 0 20px rgba(0,0,0,0.05);
+padding-top: 30px;
   transition: 0.3s ease;
   z-index: 998;
 }
+.mobile_nav .mode_icon {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: flex-end;
+  padding-right: var(--padding-container);
+}
 
+.mobile_nav .mode_icon div {
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 100%;
+  transition: all 0.3s ease;
+}
+
+.mobile_nav .mode_icon div:hover {
+  background: var(--box-color)
+}
+
+.mobile_nav .mode_icon div img {
+  max-width: 28px;
+  height: auto;
+}
+.mobile_nav .mode_icon div.ham_menu .ham_container {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  position: relative;
+}
+
+.mobile_nav .mode_icon div.ham_menu .ham_container .bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.mobile_nav .mode_icon div.ham_menu .ham_container .bar:nth-child(1) {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.mobile_nav .mode_icon div.ham_menu .ham_container .bar:nth-child(2) {
+transform: translate(-50%, -50%) rotate(-45deg);
+}
 .mobile_nav ul {
   list-style: none;
-  padding: 0;
+  padding-top: 40px;
   margin: 0;
 }
 
 .mobile_nav ul li {
-  padding: 15px 20px;
+  padding: 20px 30px;
 }
 
 .mobile_nav ul li a {
   color: var(--text-color);
-  font-size: 18px;
+  font-size: var(--font-size-lg);
 }
 
 /* 열릴 때 */
 .mobile_nav.active {
   right: 0;
 }
+/* 전체 화면 블러 오버레이 */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.15);
+  backdrop-filter: blur(1px);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  z-index: 900; /* 헤더 위, 메뉴 아래 */
+}
 
+/* 오버레이 활성화 */
+.overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
 .main_visual {
   width: 100%;
   height: 100vh;
