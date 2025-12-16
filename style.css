@@ -41,10 +41,10 @@ img {
   --letter-spacing: -0.3px;
 
   /*폰트사이즈*/
-  --font-size-title-lg: 70px;
+  --font-size-title-lg: 68px;
   --font-size-title-md: 46px;
   --font-size-subtitle: 32px;
-  --font-size-lg: 20px;
+  --font-size-lg: 22px;
   --font-size-md: 18px;
 
   /*레이아웃*/
@@ -290,11 +290,12 @@ header.scrolled .sub_header_container .mode_icon div img {
   height: 100vh;
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(10px);
-  box-shadow: -4px 0 20px rgba(0,0,0,0.05);
-padding-top: 30px;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.05);
+  padding-top: 30px;
   transition: 0.3s ease;
   z-index: 998;
 }
+
 .mobile_nav .mode_icon {
   display: flex;
   align-items: center;
@@ -318,6 +319,7 @@ padding-top: 30px;
   max-width: 28px;
   height: auto;
 }
+
 .mobile_nav .mode_icon div.ham_menu .ham_container {
   width: 28px;
   height: 28px;
@@ -340,8 +342,9 @@ padding-top: 30px;
 }
 
 .mobile_nav .mode_icon div.ham_menu .ham_container .bar:nth-child(2) {
-transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
+
 .mobile_nav ul {
   list-style: none;
   padding-top: 40px;
@@ -355,12 +358,14 @@ transform: translate(-50%, -50%) rotate(-45deg);
 .mobile_nav ul li a {
   color: var(--text-color);
   font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
 }
 
 /* 열릴 때 */
 .mobile_nav.active {
   right: 0;
 }
+
 /* 전체 화면 블러 오버레이 */
 .overlay {
   position: fixed;
@@ -368,12 +373,13 @@ transform: translate(-50%, -50%) rotate(-45deg);
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0,0,0,0.15);
+  background: rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(1px);
   opacity: 0;
   pointer-events: none;
   transition: 0.3s ease;
-  z-index: 900; /* 헤더 위, 메뉴 아래 */
+  z-index: 900;
+  /* 헤더 위, 메뉴 아래 */
 }
 
 /* 오버레이 활성화 */
@@ -381,6 +387,7 @@ transform: translate(-50%, -50%) rotate(-45deg);
   opacity: 1;
   pointer-events: auto;
 }
+
 .main_visual {
   width: 100%;
   height: 100vh;
@@ -541,7 +548,7 @@ transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .main_visual .main_visual_wrap p {
-  font-size: var(--font-size-subtitle);
+  font-size: var(--font-size-lg);
   font-weight: var(--font-weight-regular);
   text-align: center;
 }
@@ -559,8 +566,6 @@ transform: translate(-50%, -50%) rotate(-45deg);
   margin: 0 auto;
   max-width: 1400px;
 }
-
-.about_section .about_top {}
 
 .about_section .about_top .section_title {
   font-size: var(--font-size-title-md);
@@ -580,7 +585,7 @@ transform: translate(-50%, -50%) rotate(-45deg);
 
 .about_section .about_top .about_top_container .left_wrap {
   width: 40%;
-  padding: 2% 5%;
+  padding: 60px;
 }
 
 .about_section .about_top .about_top_container .right_wrap {
@@ -589,9 +594,9 @@ transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .about_section .about_top .about_top_container .right_wrap h4 {
-  font-size: 22px;
   font-weight: var(--font-weight-semibold);
   margin-bottom: 40px;
+  font-size: var(--font-size-lg);
 }
 
 .about_section .about_top .about_top_container .right_wrap p {
@@ -735,7 +740,7 @@ transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .about_section .career_container .career_wrap .career_list .year {
-  font-size: var(--font-size-subtitle);
+  font-size: 28px;
   font-weight: var(--font-weight-semibold);
 }
 
@@ -755,7 +760,7 @@ transform: translate(-50%, -50%) rotate(-45deg);
   gap: 10px;
   position: absolute;
   bottom: 0;
-  left: 186px;
+  left: 172px;
   line-height: normal;
   transition: 0.3s;
   font-weight: var(--font-weight-semibold);
@@ -1276,7 +1281,8 @@ transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .list_body .main_shot {
-  padding: 100px 0 0;
+  padding: 100px 0 75px;
+  background-color: var(--box-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1355,7 +1361,7 @@ section .more_btn:hover img {
     --font-size-title-lg: 60px;
     --font-size-title-md: 40px;
     --font-size-subtitle: 28px;
-    --font-size-lg: 18px;
+    --font-size-lg: 20px;
     --font-size-md: 16px;
   }
 
@@ -1370,6 +1376,10 @@ section .more_btn:hover img {
 
   .about_section .career_container .career_wrap .career_list .more_btn {
     left: 172px;
+  }
+
+  .fix_bar .bar_container {
+    width: 90%;
   }
 }
 
@@ -1394,6 +1404,7 @@ section .more_btn:hover img {
   header .header_container .header_list {
     gap: 60px;
   }
+
 }
 
 @media (max-width: 1024px) {
@@ -1401,7 +1412,6 @@ section .more_btn:hover img {
     --font-size-title-lg: 48px;
     --font-size-title-md: 34px;
     --font-size-subtitle: 24px;
-    --font-size-lg: 17px;
     --font-size-md: 15px;
   }
 
@@ -1411,8 +1421,13 @@ section .more_btn:hover img {
     padding: 0 20px;
   }
 
+  .about_section .about_top .about_top_container .left_wrap {
+    width: 45%;
+  }
+
   .about_section .about_top .about_top_container .right_wrap {
     padding: 50px 30px;
+    width: 55%;
   }
 
   .portfolio_section .portfolio_container {
@@ -1434,6 +1449,12 @@ section .more_btn:hover img {
   header .header_container .mode_icon div.ham_menu {
     display: block;
   }
+
+  .list_visual .logo_wrap h1 {
+    font-size: 5.5vw;
+    text-align: center;
+    letter-spacing: 0.8em;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -1442,26 +1463,8 @@ section .more_btn:hover img {
     gap: 0;
   }
 
-}
-
-@media (max-width: 768px) {
-
-  .about_section,
-  .portfolio_section {
-    max-width: 90%;
-    padding: 0 20px;
-  }
-
-  .main_visual .main_visual_wrap p {
-    font-size: 20px;
-  }
-
   .about_section .about_top .about_top_container {
     flex-direction: column;
-  }
-
-  .about_section .about_top .about_top_container .right_wrap h4 {
-    font-size: 20px;
   }
 
   .about_section .about_top .about_top_container .left_wrap {
@@ -1469,7 +1472,38 @@ section .more_btn:hover img {
   }
 
   .about_section .about_top .about_top_container .right_wrap {
-    width: 90%;
+    width: 100%;
+    padding: 50px;
+  }
+
+  .list_body .list_desc_group {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-lg: 18px;
+  }
+
+  .about_section,
+  .portfolio_section {
+    max-width: 90%;
+    padding: 0 20px;
+  }
+
+  .about_section .about_top .about_top_container {
+    flex-direction: column;
+  }
+
+  .about_section .about_top .about_top_container .left_wrap {
+    width: 50%;
+    padding: 5%;
+  }
+
+  .about_section .about_top .about_top_container .right_wrap {
+    width: 100%;
+    padding: 50px;
   }
 
   .about_section .about_top .about_top_container .right_wrap .skill_group {
@@ -1495,7 +1529,15 @@ section .more_btn:hover img {
   }
 
   .about_section .career_container .career_wrap .career_list .list_group .list_item.show {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+  }
+
+  .about_section .career_container .career_wrap .career_list .year {
+    font-size: 24px;
+  }
+
+  .portfolio_section .portfolio_container {
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .about_section .career_container .career_wrap .career_list .list_group {
@@ -1519,6 +1561,21 @@ section .more_btn:hover img {
     row-gap: 60px;
   }
 
+  .fix_bar .bar_container {
+    height: 65px;
+  }
+
+  .fix_bar .bar_container .right_wrap {
+    line-height: 65px;
+  }
+
+  .fix_bar .bar_container .right_wrap .list_btn {
+    width: 65px;
+  }
+
+  .list_body .main_shot {
+    padding-bottom: 65px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1559,6 +1616,8 @@ section .more_btn:hover img {
   .main_visual .main_visual_wrap .main_visual_title .change_words {
     max-width: 400px;
   }
+
+
 }
 
 @media (max-width: 480px) {
@@ -1579,6 +1638,7 @@ section .more_btn:hover img {
   .about_section .about_top .about_top_container .left_wrap {
     width: 70%;
     margin-top: 40px;
+
   }
 
   .about_section .about_top .about_top_container .right_wrap .skill_group li {
@@ -1610,5 +1670,30 @@ section .more_btn:hover img {
 
   .main_visual .main_visual_wrap .main_visual_title .change_words {
     max-width: 90%;
+  }
+
+  section .btn_group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  section .more_btn {
+    padding: 14px 20px;
+  }
+
+  section .more_btn img {
+    width: 20px;
+  }
+
+  .list_visual .logo_wrap h1 {
+    font-size: 7vw;
+  }
+
+  header {
+    height: 80px;
+  }
+
+  header .header_container .header_logo {
+    font-size: 22px;
   }
 }
