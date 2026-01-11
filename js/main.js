@@ -1,27 +1,29 @@
 /*다크모드 전환*/
 document.addEventListener("DOMContentLoaded", () => {
   const body = document.body;
-  const lightBtn = document.querySelector(".mode_icon .light");
-  const nightBtn = document.querySelector(".mode_icon .night");
+  const lightBtn = document.querySelectorAll(".mode_icon .light");
+  const nightBtn = document.querySelectorAll(".mode_icon .night");
 
   const savedTheme = localStorage.getItem("theme");
   if (savedTheme === "dark") {
     body.classList.add("dark-mode");
   }
 
-  lightBtn.addEventListener("click", () => {
-    console.log("light");
-    body.classList.remove("dark-mode");
-    localStorage.setItem("theme", "light");
+  lightBtn.forEach(btn => {
+    btn.addEventListener('click', ()=> {
+      body.classList.remove('dark-mode');
+      localStorage.setItem('theme', 'light');
+    });
   });
 
-  nightBtn.addEventListener("click", () => {
-    console.log("dark");
-    body.classList.add("dark-mode");
-    localStorage.setItem("theme", "dark");
+  nightBtn.forEach(btn => {
+    btn.addEventListener('click', () => {
+      body.classList.add('dark-mode');
+      localStorage.setItem('theme', 'dark');
+    });
   });
 });
-3;
+
 /*헤더 스타일*/
 window.addEventListener("scroll", function () {
   const header = this.document.querySelector(".header");
