@@ -30,28 +30,28 @@
         <div class="night"><img src="images/dark_mode_icon.png" alt="다크모드 아이콘"></div>
         <div class="ham_menu">
           <div class="ham_container" id="ham_open">
-                      <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
           </div>
         </div>
       </div>
     </div>
   </header>
 
-       <!-- 햄버거 메뉴 클릭 시 나타나는 모바일 네비 -->
-        <div class="overlay"></div>
+  <!-- 햄버거 메뉴 클릭 시 나타나는 모바일 네비 -->
+  <div class="overlay"></div>
   <nav class="mobile_nav">
     <div class="mode_icon">
-        <div class="light"><img src="images/light_mode_icon.png" alt="라이트모드 아이콘"></div>
-        <div class="night"><img src="images/dark_mode_icon.png" alt="다크모드 아이콘"></div>
-        <div class="ham_menu">
-          <div class="ham_container" id="ham_close">
-                      <span class="bar"></span>
+      <div class="light"><img src="images/light_mode_icon.png" alt="라이트모드 아이콘"></div>
+      <div class="night"><img src="images/dark_mode_icon.png" alt="다크모드 아이콘"></div>
+      <div class="ham_menu">
+        <div class="ham_container" id="ham_close">
           <span class="bar"></span>
-          </div>
+          <span class="bar"></span>
         </div>
       </div>
+    </div>
     <ul>
       <li><a href="#">Home</a></li>
       <li><a href="#about">About</a></li>
@@ -59,7 +59,7 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
-  
+
   <main>
     <section class="main_visual">
       <div class="main_visual_wrap fade-in">
@@ -118,7 +118,7 @@
               <li><img src="/images/icon_css.png" alt="css이미지"></li>
               <li><img src="/images/icon_javascript.png" alt="js이미지"></li>
               <li><img src="/images/icon_vscode.svg" alt="vscode이미지"></li>
-              <li><img src="/images/icon_github.png" alt="github이미지"></li>
+              <li class="filter-icon"><img src="/images/icon_github.png" alt="github이미지"></li>
               <li><img src="/images/icon_Photoshop.svg" alt="photoshop이미지"></li>
               <li><img src="/images/icon_illustrator.png" alt=illustrator이미지"></li>
               <li><img src="/images/icon_figma.png" alt="Figma이미지"></li>
@@ -149,6 +149,27 @@
         </div>
         <div class="career_wrap">
           <div class="line"></div>
+
+          <div class="career_list">
+            <p class="year">2026년</p>
+            <div class="list_group">
+              <div class="list_item">
+                <h5>[26.01~] 땡스소윤 쇼핑몰 리뉴얼</h5>
+                <ul>
+                  <li>- 사이트 전반 퍼블리싱 (HTML, CSS, JS)</li>
+                </ul>
+              </div>
+              <div class="list_item">
+                <h5>[26.01~] 키소주 쇼핑몰 리뉴얼</h5>
+                <ul>
+                  <li>- 사이트 전반 퍼블리싱 (HTML, CSS, JS)</li>
+                </ul>
+              </div>
+              <button class="more_btn"><span class="text">더보기</span><img src="images/more_arrow.svg"
+                  alt="버튼화살표"></button>
+            </div>
+          </div>
+
 
           <div class="career_list">
             <p class="year">2025년</p>
@@ -321,7 +342,8 @@
       <div class="portfolio_container">
         <!--리스트1-->
         <div class="portfolio_item">
-          <div class="img_wrap"><img src="/images/list/amos_list.png" alt=""></div>
+          <div class="img_wrap"><img src="/images/list/amos_list.png" alt="">
+          </div>
           <div class="text_wrap">
             <h4>아모스아인스 쇼핑몰 리뉴얼</h4>
             <p>디자인</p><span class="skill">퍼블리싱</span>
@@ -338,7 +360,8 @@
 
         <!--리스트2-->
         <div class="portfolio_item">
-          <div class="img_wrap"><img src="/images/list/osung_list.png" alt=""></div>
+          <div class="img_wrap"><img src="/images/list/osung_list.png" alt="">
+          </div>
           <div class="text_wrap">
             <h4>오성정밀화학 쇼핑몰 리뉴얼</h4>
             <p>디자인</p><span class="skill">퍼블리싱</span>
@@ -356,7 +379,7 @@
 
         <!--리스트3-->
         <div class="portfolio_item">
-          <div class="img_wrap"><img src="/images/list/fied_list.png" alt=""></div>
+          <div class="img_wrap"><img src="images/list/fied_list.png" alt=""></div>
           <div class="text_wrap">
             <h4>파이드 쇼핑몰 리뉴얼</h4>
             <p>디자인</p><span class="skill">퍼블리싱</span>
@@ -366,7 +389,7 @@
           </div>
           <div class="circle_btn_wrap">
             <a href="/list3.html">
-              <div class="circle_btn"><img src="/images/portfolio_arrow.png" alt="버튼화살표"></div>
+              <div class="circle_btn"><img src="images/portfolio_arrow.png" alt="버튼화살표"></div>
             </a>
           </div>
         </div>
@@ -375,7 +398,7 @@
 
         <!--리스트4-->
         <div class="portfolio_item">
-          <div class="img_wrap"><img src="/images/list/offnon_list.png" alt=""></div>
+          <div class="img_wrap"><img src="images/list/offnon_list.png" alt=""></div>
           <div class="text_wrap">
             <h4>오프앤온 쇼핑몰 오픈</h4>
             <p>디자인</p><span class="skill">퍼블리싱</span>
@@ -392,10 +415,11 @@
 
         <!--리스트5-->
         <div class="portfolio_item">
-          <div class="img_wrap"><img src="/images/list/market_list.png" alt=""></div>
+          <div class="img_wrap"><img src="/images/list/erp_list.png" alt="">
+          </div>
           <div class="text_wrap">
             <h4>회사 ERP 시스템 디자인</h4>
-            <p>디자인</p>
+            <p>디자인<span class="skill">퍼블리싱</span></p>
             <div class="tags">
               <span>HTML</span><span>CSS</span><span>JS</span><span>Photoshop</span>
             </div>
@@ -409,7 +433,8 @@
 
         <!--리스트6-->
         <div class="portfolio_item">
-          <div class="img_wrap"><img src="/images/listkabine_list.png" alt=""></div>
+          <div class="img_wrap"><img src="/images/listkabine_list.png" alt="">
+          </div>
           <div class="text_wrap">
             <h4>[개인] 주문제작 케이크 사이트</h4>
             <p>디자인</p><span class="skill">퍼블리싱</span>
@@ -419,12 +444,12 @@
           </div>
           <div class="circle_btn_wrap">
             <a href="/list6.html">
-              <div class="circle_btn"><img src="/images/portfolio_arrow.png" alt="버튼화살표"></div>
+              <div class="circle_btn"><img src="images/portfolio_arrow.png" alt="버튼화살표"></div>
             </a>
           </div>
-        <div>
+          <div>
+          </div>
         </div>
-      </div>
     </section>
 
     <section class="contact_section animate" id="contact">
