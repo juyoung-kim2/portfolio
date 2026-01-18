@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /*모바일 사이드 메뉴*/
-const hamOpen = document.querySelector("#ham_open");   // 열기
+const hamOpen = document.querySelector("#ham_open"); // 열기
 const hamClose = document.querySelector("#ham_close"); // 닫기
 const mobileNav = document.querySelector(".mobile_nav");
 const overlay = document.querySelector(".overlay");
@@ -115,12 +115,14 @@ const overlay = document.querySelector(".overlay");
 hamOpen.addEventListener("click", () => {
   mobileNav.classList.add("active");
   overlay.classList.add("active");
+  document.body.style.overflow = "hidden"; // 열릴 때
 });
 
 // 닫기 버튼 클릭
 hamClose.addEventListener("click", () => {
   mobileNav.classList.remove("active");
   overlay.classList.remove("active");
+  document.body.style.overflow = ""; // 열릴 때
 });
 
 // 오버레이 클릭 → 닫기

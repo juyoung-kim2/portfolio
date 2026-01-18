@@ -126,6 +126,51 @@ body.dark-mode .more_btn_wrap:after {
   filter: brightness(0.1);
 }
 
+body.dark-mode .overlay {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+body.dark-mode .mobile_nav .mode_icon div img {
+  filter: invert(1);
+}
+
+body.dark-mode .mobile_nav .mode_icon div.ham_menu .ham_container .bar {
+  background: #fff;
+}
+
+body.dark-mode .mobile_nav {
+  background: var(--box-color);
+}
+
+body.dark-mode header .header_container .mode_icon div.ham_menu .ham_container .bar {
+  background: #fff;
+}
+
+body.dark-mode .about_section .career_container .career_wrap .career_list .more_btn:hover {
+  color: var(--box-color);
+}
+
+body.dark-mode .about_section .career_container .career_wrap .career_list .more_btn img {
+  transition: all 0.3s;
+}
+
+body.dark-mode section .more_btn:hover {
+  color: #4B3F2F;
+}
+
+body.dark-mode section .more_btn_bk {
+  background: #3A342C;
+  color: #FFFFFF;
+  border-color: #3A342C;
+  transition: all 0.3s;
+}
+
+body.dark-mode section .more_btn_bk:hover {
+  color: #fff !important;
+  background: transparent;
+  border-color: #3A342C !important;
+}
+
 body.dark-mode header .header_container .mode_icon div img {
   filter: invert(1);
 }
@@ -224,7 +269,7 @@ header .header_container {
 }
 
 header .header_container .header_logo {
-  font-size: 24px;
+  font-size: 26px;
   color: var(--text-color);
   font-weight: var(--font-weight-bold);
 }
@@ -311,12 +356,15 @@ header.scrolled .sub_header_container .mode_icon div img {
   right: -300px;
   width: 300px;
   height: 100vh;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(10px);
-  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(to left,
+      rgba(255, 255, 255, 0.95) 70%,
+      rgba(255, 255, 255, 0.78) 100%);
+
+  backdrop-filter: blur(20px);
+  box-shadow: -18px 0 28px rgba(0, 0, 0, 0.12);
   padding-top: 30px;
-  transition: 0.3s ease;
-  z-index: 998;
+  transition: right 0.3s ease;
+  z-index: 999
 }
 
 .mobile_nav .mode_icon {
@@ -382,6 +430,11 @@ header.scrolled .sub_header_container .mode_icon div img {
   color: var(--text-color);
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-medium);
+  transition: all 0.3s ease;
+}
+
+.mobile_nav ul li:hover a {
+  opacity: 0.6;
 }
 
 /* 열릴 때 */
@@ -420,7 +473,7 @@ header.scrolled .sub_header_container .mode_icon div img {
 }
 
 .main_visual .floating_circle {
-  width: 30vw;
+  width: 24vw;
   height: 20vw;
   border-radius: 50%;
   background: var(--primary-color);
@@ -475,7 +528,7 @@ header.scrolled .sub_header_container .mode_icon div img {
   width: 100%;
   overflow: hidden;
   justify-content: center;
-  margin-bottom: 70px;
+  margin-bottom: 80px;
   ;
 }
 
@@ -605,6 +658,7 @@ header.scrolled .sub_header_container .mode_icon div img {
   border-radius: var(--border-radius-base);
   /*gap: 100px;*/
   margin-bottom: 40px;
+  padding: 0 20px;
 }
 
 .about_section .about_top .about_top_container .left_wrap {
@@ -633,10 +687,10 @@ header.scrolled .sub_header_container .mode_icon div img {
 }
 
 .about_section .about_top .about_top_container .right_wrap .skill_group {
-  margin-top: 50px;
+  margin-top: 60px;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 8px;
   flex-wrap: wrap;
 }
 
@@ -725,16 +779,16 @@ header.scrolled .sub_header_container .mode_icon div img {
 
 .about_section .career_container .career_wrap {
   margin-top: 80px;
-  padding-left: 100px;
   position: relative;
+  padding: 0 50px;
+  box-sizing: border-box;
 }
 
 .about_section .career_container .career_wrap .career_list {
   display: flex;
   align-items: flex-start;
-  gap: 80px;
   position: relative;
-  margin-bottom: 100px;
+  margin-bottom: 120px;
   padding-bottom: 40px;
 }
 
@@ -745,12 +799,14 @@ header.scrolled .sub_header_container .mode_icon div img {
 .about_section .career_container .career_wrap .career_list::before {
   content: '';
   display: block;
-  width: 3px;
+  width: 2px;
   background-color: var(--primary-color);
-  height: calc(100% + 100px);
+  height: calc(100% + 120px);
   position: absolute;
-  left: -80px;
-  top: 24px;
+
+  left: -50px;
+  top: 16px;
+
 }
 
 .about_section .career_container .career_wrap .career_list::after {
@@ -762,19 +818,24 @@ header.scrolled .sub_header_container .mode_icon div img {
   background-color: var(--primary-color);
   border: 2px solid var(--background-color);
   position: absolute;
-  left: -86px;
-  top: 20px;
+
+  left: -56px;
+  top: 5px;
+
 }
 
 .about_section .career_container .career_wrap .career_list .year {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: var(--font-weight-semibold);
+  width: 100px;
+  line-height: 1;
+  flex-shrink: 0;
 }
 
 .about_section .career_container .career_wrap .career_list .list_group {
   display: flex;
   flex-direction: column;
-  margin-top: 6px;
+  padding-left: 160px;
 }
 
 .about_section .career_container .career_wrap .career_list .more_btn {
@@ -785,9 +846,9 @@ header.scrolled .sub_header_container .mode_icon div img {
   gap: 10px;
   position: absolute;
   bottom: 0;
-  left: 172px;
+  left: 260px;
   line-height: normal;
-  transition: 0.3s;
+  transition: all 0.3s;
   font-weight: var(--font-weight-semibold);
 }
 
@@ -813,6 +874,7 @@ header.scrolled .sub_header_container .mode_icon div img {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-semibold);
   margin-bottom: 20px;
+  line-height: 1;
 }
 
 .about_section .career_container .career_wrap .career_list .list_group .list_item li {
@@ -1008,7 +1070,7 @@ header.scrolled .sub_header_container .mode_icon div img {
 .contact_section .contact_info li {
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-medium);
-  line-height: 3;
+  line-height: 4;
 }
 
 .contact_section .contact_info li span {
@@ -1378,10 +1440,6 @@ section .more_btn img {
     max-width: 1200px;
   }
 
-  .about_section .career_container .career_wrap .career_list .more_btn {
-    left: 172px;
-  }
-
   .fix_bar .bar_container {
     width: 90%;
   }
@@ -1405,9 +1463,6 @@ section .more_btn img {
     max-width: 1000px;
   }
 
-  .about_section .career_container .career_wrap .career_list::after {
-    top: 15px;
-  }
 
   header .header_container .header_list {
     gap: 60px;
@@ -1440,14 +1495,6 @@ section .more_btn img {
 
 
 
-  .about_section .career_container .career_wrap .career_list .more_btn {
-    left: 160px;
-  }
-
-  .about_section .career_container .career_wrap .career_list::after {
-    top: 12px;
-  }
-
   header .header_container .header_list {
     display: none;
   }
@@ -1467,6 +1514,7 @@ section .more_btn img {
   .main_visual .main_visual_wrap .main_visual_title {
     flex-direction: column;
     gap: 0;
+    margin-bottom: 40px;
   }
 
   .about_section .about_top .about_top_container {
@@ -1488,6 +1536,7 @@ section .more_btn img {
 }
 
 @media (max-width: 768px) {
+
   :root {
     --font-size-lg: 18px;
   }
@@ -1509,29 +1558,24 @@ section .more_btn img {
 
   .about_section .about_top .about_top_container .right_wrap {
     width: 100%;
-    padding: 50px;
+    padding: 20px;
   }
 
   .about_section .about_top .about_top_container .right_wrap .skill_group {
     gap: 10px;
   }
 
-  .about_section .career_container .career_wrap .career_list::before {
-    left: -70px;
-  }
 
   .about_section .career_container .career_wrap .career_list::after {
-    top: 10px;
+    top: 0;
+    left: -45px;
   }
 
-  .about_section .career_container .career_wrap .career_list::after {
-    left: -76px
-  }
 
   .about_section .career_container .career_wrap .career_list {
     flex-direction: column;
-    gap: 14px;
-    margin-bottom: 40px;
+    gap: 30px;
+    margin-bottom: 80px;
   }
 
   .about_section .career_container .career_wrap .career_list .list_group .list_item.show {
@@ -1548,6 +1592,7 @@ section .more_btn img {
 
   .about_section .career_container .career_wrap .career_list .list_group {
     padding-bottom: 20px;
+    padding-left: 0;
   }
 
   .about_section .career_container .career_wrap .career_list .list_group .list_item h5 {
@@ -1559,7 +1604,8 @@ section .more_btn img {
   }
 
   .about_section .career_container .career_wrap .career_list::before {
-    height: calc(100% + 37px);
+    height: calc(100% + 80px);
+    left: -40px;
   }
 
   .portfolio_section .portfolio_container {
@@ -1652,23 +1698,14 @@ section .more_btn img {
     height: 70px;
   }
 
-  .about_section .career_container .career_wrap .career_list::before {
-    width: 2px;
-  }
 
   .about_section .career_container .career_wrap {
     padding-left: 60px;
+    padding-right: 20px;
   }
 
-  .about_section .career_container .career_wrap .career_list::before {
-    width: 2px;
-    left: -40px;
-    top: 22px;
-  }
 
-  .about_section .career_container .career_wrap .career_list::after {
-    left: -46px;
-  }
+  .about_section .career_container .career_wrap .career_list::after {}
 
   header .header_container .mode_icon>div:not(.ham_menu) {
     display: none;
