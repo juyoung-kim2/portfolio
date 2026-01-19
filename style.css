@@ -1720,6 +1720,10 @@ section .more_btn img {
   }
 
   section .more_btn {
+    padding: 14px 16px;
+  }
+
+  .fix_bar .bar_container .left_wrap .more_btn {
     padding: 0;
   }
 
