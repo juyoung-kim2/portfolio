@@ -154,21 +154,11 @@ body.dark-mode .about_section .career_container .career_wrap .career_list .more_
   transition: all 0.3s;
 }
 
-body.dark-mode section .more_btn:hover {
-  color: #4B3F2F;
-}
-
 body.dark-mode section .more_btn_bk {
   background: #3A342C;
   color: #FFFFFF;
   border-color: #3A342C;
   transition: all 0.3s;
-}
-
-body.dark-mode section .more_btn_bk:hover {
-  color: #fff !important;
-  background: transparent;
-  border-color: #3A342C !important;
 }
 
 body.dark-mode header .header_container .mode_icon div img {
@@ -361,7 +351,6 @@ header.scrolled .sub_header_container .mode_icon div img {
       rgba(255, 255, 255, 0.78) 100%);
 
   backdrop-filter: blur(20px);
-  box-shadow: -18px 0 28px rgba(0, 0, 0, 0.12);
   padding-top: 30px;
   transition: right 0.3s ease;
   z-index: 999
@@ -440,6 +429,7 @@ header.scrolled .sub_header_container .mode_icon div img {
 /* 열릴 때 */
 .mobile_nav.active {
   right: 0;
+  box-shadow: -18px 0 28px rgba(0, 0, 0, 0.10);
 }
 
 /* 전체 화면 블러 오버레이 */
@@ -1547,6 +1537,10 @@ section .more_btn img {
     padding: 0 20px;
   }
 
+  header .header_container .mode_icon {
+    gap: 14px;
+  }
+
   .about_section .about_top .about_top_container {
     flex-direction: column;
   }
@@ -1559,6 +1553,7 @@ section .more_btn img {
   .about_section .about_top .about_top_container .right_wrap {
     width: 100%;
     padding: 20px;
+    padding-bottom: 40px;
   }
 
   .about_section .about_top .about_top_container .right_wrap .skill_group {
@@ -1568,7 +1563,7 @@ section .more_btn img {
 
   .about_section .career_container .career_wrap .career_list::after {
     top: 0;
-    left: -45px;
+    left: -46px;
   }
 
 
@@ -1604,7 +1599,7 @@ section .more_btn img {
   }
 
   .about_section .career_container .career_wrap .career_list::before {
-    height: calc(100% + 80px);
+    height: calc(100% + 70px);
     left: -40px;
   }
 
@@ -1615,10 +1610,12 @@ section .more_btn img {
 
   .fix_bar .bar_container {
     height: 65px;
+
   }
 
   .fix_bar .bar_container .right_wrap {
     line-height: 65px;
+    font-size: 13px;
   }
 
   .fix_bar .bar_container .right_wrap .list_btn {
@@ -1628,6 +1625,8 @@ section .more_btn img {
   .list_body .main_shot {
     padding-bottom: 65px;
   }
+
+  .fix_bar .bar_container .right_wrap .next_btn {}
 }
 
 @media (max-width: 600px) {
@@ -1721,7 +1720,7 @@ section .more_btn img {
   }
 
   section .more_btn {
-    padding: 14px 20px;
+    padding: 0;
   }
 
   section .more_btn img {
