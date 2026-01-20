@@ -10,15 +10,25 @@ function initDarkMode() {
   const images = document.querySelectorAll("img.dark-switch");
 
   // 이미지 적용 함수 (PC/MO + Light/Dark)
-  function applyResponsiveImages(isDark) {
-    images.forEach((img) => {
-      const original = img.dataset.originalBase; // 예: /images/list/amos_capture01
-      const isMobile = window.innerWidth <= 768;
+function applyResponsiveImages(isDark) {
+    images.forEach(img => {
+      const base = img.dataset.base;
 
-      const sizeSuffix = isMobile ? "_750" : "_1920";
-      const themeSuffix = isDark ? "_dark" : "";
+      // 화면 크기별 이미지 파일 선택
+      let size = "_1920"; // 기본값 PC
 
-      img.src = `${original}${sizeSuffix}${themeSuffix}.png`;
+      if (window.innerWidth <= 768) {
+        size = "_750"; // 모바일
+      } else if (window.innerWidth <= 1536) {
+        size = "_1600"; // 중간 사이즈 (태블릿/작은 PC)
+      } else {
+        size = "_1920"; // 큰 화면
+      }
+
+      // 다크모드 suffix
+      const theme = isDark ? "_dark" : "";
+
+      img.src = `${base}${size}${theme}.png`;
     });
   }
 
