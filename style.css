@@ -551,22 +551,25 @@ header.scrolled .sub_header_container .mode_icon div img {
 .main_visual .main_visual_wrap .main_visual_title .change_words:before {
   content: '[';
   display: block;
-  font-weight: var(--font-weight-medium);
-  top: -4px;
+  font-weight: var(--font-weight-regular);
+  top: 0px;
+  left: -2px;
   position: relative;
 }
 
 .main_visual .main_visual_wrap .main_visual_title .change_words:after {
   content: ']';
   display: block;
-  font-weight: var(--font-weight-medium);
-  top: -4px;
+  font-weight: var(--font-weight-regular);
+  top: 0px;
+  left: 2px;
   position: relative;
 }
 
 .main_visual .main_visual_wrap .main_visual_title .change_words .word_box .change_word .char {
   transform: translateY(130px);
   transition: transform 0.8s;
+  margin: 0 2px;
 }
 
 .main_visual .main_visual_wrap .main_visual_title .change_words .word_box .change_word.on .char {
