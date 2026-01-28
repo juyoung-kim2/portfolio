@@ -1,12 +1,12 @@
-# Portfolio (2026)
+# 📁 Portfolio (2026)
 
-This repository contains the source code of my portfolio website.  
-It showcases UI design, markup, and web interface implementation work.
+이 저장소는 개인 포트폴리오 웹사이트의 소스 코드를 포함하고 있습니다.
+UI 디자인, 마크업, 웹 인터페이스 구현 작업 전반을 담고 있습니다.
 
 ## Tech Stack
 - HTML, CSS, JavaScript
-- Responsive layout, dark mode
-- GitHub Pages deployment
+- 반응형 레이아웃 및 다크 모드 구현
+- GitHub Pages를 통한 배포
 
 ## Overview
-The project focuses on clean UI, structured markup, and seamless design-to-development flow.
+이 프로젝트는 깔끔한 UI를 기반으로, 디자인 단계에서 세운 흐름이 개발까지 자연스럽게 이어지도록 작업하여 결과물의 통일성과 완성도를 높였습니다.
