@@ -1358,7 +1358,7 @@ header.scrolled .sub_header_container .mode_icon div img {
 
 
 .list_body .main_shot {
-  padding: 100px 0 75px;
+  padding: 40px 0 100px;
   background-color: #FCFBFB;
   display: flex;
   flex-direction: column;
