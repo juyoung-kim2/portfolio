@@ -1271,6 +1271,7 @@ header.scrolled .sub_header_container .mode_icon div img {
   max-width: 800px;
   margin: 0 auto;
   padding: 100px 0;
+  word-break: keep-all;
 }
 
 .list_body .list_desc_group h4 {
@@ -1638,6 +1639,10 @@ section .more_btn img {
     --font-size-base: 15px;
   }
 
+  section .more_btn {
+    font-size: 13px;
+  }
+
   .portfolio_section .portfolio_container {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -1680,7 +1685,9 @@ section .more_btn img {
     max-width: 400px;
   }
 
-
+  .list_body .list_desc_group .list_desc {
+    gap: 30px;
+  }
 }
 
 @media (max-width: 480px) {
