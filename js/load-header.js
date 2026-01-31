@@ -1,7 +1,7 @@
 
 // load-header.js
 document.addEventListener('DOMContentLoaded', () => {
-  fetch('portfolio//sub_header.html')
+  fetch('/portfolio//sub_header.html')
     .then(res => {
       if (!res.ok) throw new Error('헤더를 불러오지 못했습니다.');
       return res.text();
