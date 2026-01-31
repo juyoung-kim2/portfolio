@@ -996,7 +996,7 @@ header.scrolled .sub_header_container .mode_icon div img {
 
 .portfolio_section .portfolio_container .portfolio_item .circle_btn_wrap:before {
   content: '';
-  background: url(/images/card_corner.png) center center;
+  background: url(images/card_corner.png) center center;
   width: 20px;
   height: 20px;
   background-size: cover;
@@ -1007,7 +1007,7 @@ header.scrolled .sub_header_container .mode_icon div img {
 
 .portfolio_section .portfolio_container .portfolio_item .circle_btn_wrap:after {
   content: '';
-  background: url(/images/card_corner.png) center center;
+  background: url(images/card_corner.png) center center;
   width: 20px;
   height: 20px;
   background-size: cover;
