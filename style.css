@@ -628,11 +628,11 @@ header.scrolled .sub_header_container .mode_icon div img {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 100px;
+  bottom: 8%;
 }
 
 .about_section {
-  margin: 0 auto;
+  margin: 160px auto 0;
   max-width: 1400px;
   padding: 0 40px;
 }
@@ -867,7 +867,8 @@ header.scrolled .sub_header_container .mode_icon div img {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-semibold);
   margin-bottom: 20px;
-  line-height: 1;
+  line-height: 1.5;
+  word-break: keep-all;
 }
 
 .about_section .career_container .career_wrap .career_list .list_group .list_item li {
@@ -1549,7 +1550,7 @@ section .more_btn img {
   }
 
   .about_section .about_top .about_top_container .left_wrap {
-    width: 50%;
+    width: 60%;
     padding: 5%;
   }
 
@@ -1633,12 +1634,20 @@ section .more_btn img {
 }
 
 @media (max-width: 600px) {
+  :root {
+    --font-size-base: 15px;
+  }
+
   .portfolio_section .portfolio_container {
     grid-template-columns: repeat(1, 1fr);
   }
 
   .about_section .career_container .conpany_info {
     display: flex;
+  }
+
+  .about_section .about_top .about_top_container .right_wrap h4 {
+    margin-bottom: 20px;
   }
 
   .about_section .career_container .conpany_info .info_title {
@@ -1714,7 +1723,15 @@ section .more_btn img {
   }
 
   .main_visual .main_visual_wrap .main_visual_title .change_words {
-    max-width: 90%;
+    max-width: 80%;
+  }
+
+  .main_visual .floating_circle {
+    width: 70vw;
+  }
+
+  .about_section .about_top .section_title {
+    margin-bottom: 20px;
   }
 
   section .btn_group {
