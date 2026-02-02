@@ -1725,7 +1725,9 @@ section .more_btn img {
 
   .about_section .career_container .career_wrap .career_list::after {}
 
-  header .header_container .mode_icon>div:not(.ham_menu) {}
+  #main header .header_container .mode_icon>div:not(.ham_menu) {
+    display: none;
+  }
 
   .main_visual .main_visual_wrap .main_visual_title .change_words {
     max-width: 80%;
