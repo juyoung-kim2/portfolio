@@ -236,11 +236,11 @@ header .header_container .mode_icon div.ham_menu .ham_container .bar {
 }
 
 header .header_container .mode_icon div.ham_menu .ham_container .bar:nth-child(1) {
-  margin-top: -6px;
+  margin-top: -8px;
 }
 
 header .header_container .mode_icon div.ham_menu .ham_container .bar:nth-child(2) {
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
 
