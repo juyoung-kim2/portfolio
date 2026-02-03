@@ -217,8 +217,8 @@ header .header_container .mode_icon div.ham_menu {
 }
 
 header .header_container .mode_icon div.ham_menu .ham_container {
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
   padding: 0;
   position: relative;
 }
@@ -235,11 +235,11 @@ header .header_container .mode_icon div.ham_menu .ham_container .bar {
 }
 
 header .header_container .mode_icon div.ham_menu .ham_container .bar:nth-child(1) {
-  margin-top: -9px;
+  margin-top: -8px;
 }
 
 header .header_container .mode_icon div.ham_menu .ham_container .bar:nth-child(2) {
-  margin-top: 9px;
+  margin-top: 8px;
 }
 
 
@@ -321,7 +321,7 @@ header .sub_header_container .header_logo {
 header .sub_header_container .mode_icon div img {
   filter: invert(1);
   transition: all 0.3s ease;
-  max-width: 22px;
+  max-width: 24px;
 }
 
 header .sub_header_container .mode_icon div:hover img {
@@ -386,20 +386,20 @@ header.scrolled .sub_header_container .mode_icon div img {
 }
 
 .mobile_nav .mode_icon div img {
-  max-width: 22px;
+  max-width: 24px;
   height: auto;
 }
 
 .mobile_nav .mode_icon div.ham_menu .ham_container {
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  height: 24px;
   padding: 0;
   position: relative;
 }
 
 .mobile_nav .mode_icon div.ham_menu .ham_container .bar {
   display: block;
-  width: 24px;
+  width: 22px;
   height: 2px;
   background-color: var(--text-color);
   position: absolute;
@@ -994,7 +994,7 @@ header.scrolled .sub_header_container .mode_icon div img {
   padding: 6px 8px;
   border-radius: 2px;
   background-color: var(--background-color);
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1;
 }
 
