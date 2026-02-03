@@ -321,7 +321,7 @@ header .sub_header_container .header_logo {
 header .sub_header_container .mode_icon div img {
   filter: invert(1);
   transition: all 0.3s ease;
-  max-width: 24px;
+  max-width: 22px;
 }
 
 header .sub_header_container .mode_icon div:hover img {
@@ -354,7 +354,7 @@ header.scrolled .sub_header_container .mode_icon div img {
   top: 0;
   right: -300px;
   max-width: 300px;
-  width: 8vw;
+  width: 80vw;
   height: 100vh;
   background: linear-gradient(to left,
       rgba(255, 255, 255, 0.95) 70%,
@@ -386,13 +386,13 @@ header.scrolled .sub_header_container .mode_icon div img {
 }
 
 .mobile_nav .mode_icon div img {
-  max-width: 26px;
+  max-width: 22px;
   height: auto;
 }
 
 .mobile_nav .mode_icon div.ham_menu .ham_container {
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
   padding: 0;
   position: relative;
 }
@@ -1221,13 +1221,14 @@ header.scrolled .sub_header_container .mode_icon div img {
 
 .fix_bar .bar_container .right_wrap .list_btn>a>span {
   display: block;
-  width: 20px;
+  width: 18px;
   height: 2px;
   background: var(--text-color);
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  border-radius: 1px;
 }
 
 .fix_bar .bar_container .right_wrap .list_btn>a {
@@ -1559,7 +1560,7 @@ section .more_btn img {
   }
 
   header .header_container .mode_icon {
-    gap: 14px;
+    gap: 10px;
   }
 
   .about_section .about_top .about_top_container {
@@ -1762,7 +1763,6 @@ section .more_btn img {
   }
 
   section .btn_group {
-    flex-direction: column;
     align-items: flex-start;
   }
 
