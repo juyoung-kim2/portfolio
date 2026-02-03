@@ -232,14 +232,15 @@ header .header_container .mode_icon div.ham_menu .ham_container .bar {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  border-radius: 1px;
 }
 
 header .header_container .mode_icon div.ham_menu .ham_container .bar:nth-child(1) {
-  margin-top: -8px;
+  margin-top: -6px;
 }
 
 header .header_container .mode_icon div.ham_menu .ham_container .bar:nth-child(2) {
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
 
@@ -945,7 +946,7 @@ header.scrolled .sub_header_container .mode_icon div img {
 .portfolio_section .portfolio_container .portfolio_item .text_wrap {
   background: var(--box-color);
   padding: 30px;
-  padding-right: 82px;
+  padding-right: 100px;
   height: 100%;
 }
 
@@ -1764,6 +1765,7 @@ section .more_btn img {
 
   section .btn_group {
     align-items: flex-start;
+    gap: 12px;
   }
 
   section .more_btn {
