@@ -302,7 +302,7 @@ header .header_container .mode_icon div:hover {
 }
 
 header .header_container .mode_icon div img {
-  max-width: 28px;
+  max-width: 26px;
   height: auto;
 }
 
@@ -353,7 +353,8 @@ header.scrolled .sub_header_container .mode_icon div img {
   position: fixed;
   top: 0;
   right: -300px;
-  width: 300px;
+  max-width: 300px;
+  width: 8vw;
   height: 100vh;
   background: linear-gradient(to left,
       rgba(255, 255, 255, 0.95) 70%,
@@ -385,7 +386,7 @@ header.scrolled .sub_header_container .mode_icon div img {
 }
 
 .mobile_nav .mode_icon div img {
-  max-width: 28px;
+  max-width: 26px;
   height: auto;
 }
 
@@ -629,6 +630,7 @@ header.scrolled .sub_header_container .mode_icon div img {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-regular);
   text-align: center;
+  word-break: keep-all;
 }
 
 .main_visual .main_visual_wrap p.copy {
@@ -950,13 +952,14 @@ header.scrolled .sub_header_container .mode_icon div img {
 .portfolio_section .portfolio_container .portfolio_item .text_wrap h4 {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-semibold);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   white-space: nowrap;
 }
 
 .portfolio_section .portfolio_container .portfolio_item .text_wrap p {
   color: var(--text-sub-color);
   display: inline-block;
+  font-size: 13px;
 }
 
 .portfolio_section .portfolio_container .portfolio_item .text_wrap .skill {
@@ -964,6 +967,7 @@ header.scrolled .sub_header_container .mode_icon div img {
   display: inline-block;
   padding-left: 20px;
   position: relative;
+  font-size: 13px;
 }
 
 .portfolio_section .portfolio_container .portfolio_item .text_wrap .skill::before {
@@ -1569,7 +1573,7 @@ section .more_btn img {
 
   .about_section .about_top .about_top_container .right_wrap {
     width: 100%;
-    padding: 20px;
+    padding: 20px 10px;
     padding-bottom: 40px;
   }
 
@@ -1587,11 +1591,11 @@ section .more_btn img {
   .about_section .career_container .career_wrap .career_list {
     flex-direction: column;
     gap: 30px;
-    margin-bottom: 80px;
+    margin-bottom: 70px;
   }
 
   .about_section .career_container .career_wrap .career_list .list_group .list_item.show {
-    margin-bottom: 30px;
+    margin-bottom: 24px;
   }
 
   .about_section .career_container .career_wrap .career_list .year {
