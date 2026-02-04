@@ -268,7 +268,7 @@ header .header_container {
 }
 
 header .header_container .header_logo {
-  font-size: 6vw;
+  font-size: 24px;
   color: var(--text-color);
   font-weight: var(--font-weight-bold);
 }
@@ -1554,6 +1554,10 @@ section .more_btn img {
     --font-size-lg: 18px;
   }
 
+  header .header_container .header_logo {
+    font-size: 4vw;
+  }
+
   .about_section,
   .portfolio_section {
     max-width: 90%;
@@ -1622,7 +1626,7 @@ section .more_btn img {
   }
 
   .about_section .career_container .career_wrap .career_list::before {
-    height: calc(100% + 70px);
+    height: calc(100% + 60px);
     left: -40px;
   }
 
