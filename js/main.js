@@ -112,20 +112,26 @@ const mobileNav = document.querySelector(".mobile_nav");
 const overlay = document.querySelector(".overlay");
 
 // 열기 버튼 클릭
-hamOpen.addEventListener("click", () => {
-  mobileNav.classList.add("active");
-  overlay.classList.add("active");
-  document.body.style.overflow = "hidden"; // 열릴 때
-});
+if (hamOpen && mobileNav && overlay) {
+  hamOpen.addEventListener("click", () => {
+    mobileNav.classList.add("active");
+    overlay.classList.add("active");
+    document.body.style.overflow = "hidden";
+  });
+}
 
-function closeMenu(){
+function closeMenu() {
   mobileNav.classList.remove("active");
   overlay.classList.remove("active");
   document.body.style.overflow = "";
 }
 
-hamClose.addEventListener("click", closeMenu)
-overlay.addEventListener("click", closeMenu)
+if (hamClose) {
+  hamClose.addEventListener("click", closeMenu);
+}
+if (overlay) {
+  overlay.addEventListener("click", closeMenu);
+}
 
 /*스크롤 헤더 높이 감지*/
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
