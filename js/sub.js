@@ -86,20 +86,6 @@ window.addEventListener("scroll", function () {
   }
 });
 
-/*스크롤 이벤트*/
-window.addEventListener("scroll", function () {
-  let scrollPosition = window.scrollY;
-  const sections = document.querySelectorAll(".animate");
-
-  sections.forEach(function (section) {
-    const offTop = section.offsetTop;
-
-    if (!section.classList.contains("on") && scrollPosition + window.innerHeight > offTop + 100) {
-      section.classList.add("on");
-    }
-  });
-});
-
 document.addEventListener("DOMContentLoaded", function () {
   let lastScrollTop = 0;
   const target = document.querySelector(".fix_bar"); // 클래스 붙일 요소

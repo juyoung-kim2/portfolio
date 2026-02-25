@@ -40,25 +40,24 @@ document.addEventListener("DOMContentLoaded", function () {
   const words = document.querySelectorAll(".change_word");
   const wordBox = document.querySelector(".word_box");
   let currentIndex = 0;
+  let isAnimating = false; // 애니메이션 상태 확인
 
   function showWord(index) {
+    if (isAnimating) return; // 애니메이션 중복 실행 방지
+    isAnimating = true;
+
+    // 텍스트 변경 시마다 동적 width 계산
+    const activeWord = words[index];
+    wordBox.style.width = `${activeWord.offsetWidth}px`;
+    
     words.forEach((word, i) => {
       word.classList.toggle("on", i === index);
     });
 
-    const activeWord = words[index];
-    const temp = activeWord.cloneNode(true);
-    temp.style.position = "absolute";
-    temp.style.visibility = "hidden";
-    temp.style.display = "inline-flex";
-    temp.style.fontSize = "70px";
-    temp.style.fontWeight = "700";
-    document.body.appendChild(temp);
-
-    const targetWidth = temp.offsetWidth;
-    document.body.removeChild(temp);
-
-    wordBox.style.width = targetWidth + "px";
+    // 애니메이션이 끝나면 isAnimating을 다시 false로 설정
+    requestAnimationFrame(() => {
+    isAnimating = false;
+    });
   }
 
   showWord(currentIndex);
@@ -68,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
     showWord(currentIndex);
   }, 3000);
 });
+
 
 /*경력 더보기 버튼*/
 document.addEventListener("DOMContentLoaded", function () {
@@ -118,18 +118,14 @@ hamOpen.addEventListener("click", () => {
   document.body.style.overflow = "hidden"; // 열릴 때
 });
 
-// 닫기 버튼 클릭
-hamClose.addEventListener("click", () => {
+function closeMenu(){
   mobileNav.classList.remove("active");
   overlay.classList.remove("active");
-  document.body.style.overflow = ""; // 열릴 때
-});
+  document.body.style.overflow = "";
+}
 
-// 오버레이 클릭 → 닫기
-overlay.addEventListener("click", () => {
-  mobileNav.classList.remove("active");
-  overlay.classList.remove("active");
-});
+hamClose.addEventListener("click", closeMenu)
+overlay.addEventListener("click", closeMenu)
 
 /*스크롤 헤더 높이 감지*/
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {

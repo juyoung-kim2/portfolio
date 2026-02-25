@@ -540,7 +540,7 @@ header.scrolled .sub_header_container .mode_icon div img {
 
 .main_visual .main_visual_wrap .main_visual_title .change_words {
   font-size: var(--font-size-title-lg);
-  height: 110px;
+  height: 100px;
   font-weight: var(--font-weight-bold);
   position: relative;
   display: flex;
