@@ -312,17 +312,18 @@ header .header_container .header_logo {
 }
 
 header .header_container .header_list {
-  display: flex;
-  align-items: center;
-  gap: 80px;
-  font-size: var(--font-size-md);
-  font-weight: var(--font-weight-medium);
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-
+header .header_container .header_list ul {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+}
 header .header_container .mode_icon {
   display: flex;
   align-items: center;
@@ -1337,6 +1338,7 @@ header.scrolled .sub_header_container .mode_icon div img {
   opacity: 1;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   border-top: 2px solid #eee;
+  z-index: 9999999;
 }
 
 .fix_bar .bar_container {
@@ -1576,9 +1578,6 @@ section .more_btn {
   transition: all 0.3s;
   width: fit-content;
   font-size: 14px;
-}
-
-section .more_btn > a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1600,6 +1599,9 @@ footer {
   text-align: center;
   font-size: 13px;
   padding: 10px 0;
+  position: relative;
+  z-index: 999999;
+  background-color: #fff;
 }
 /* =======================
     반응형
@@ -1637,7 +1639,7 @@ footer {
   }
 
   .main_visual .main_visual_wrap .main_visual_title .change_words {
-    height: 64px;
+    height: 70px;
   }
 
   .about_section,
