@@ -1601,7 +1601,8 @@ footer {
   padding: 10px 0;
   position: relative;
   z-index: 999999;
-  background-color: #fff;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 /* =======================
     반응형
