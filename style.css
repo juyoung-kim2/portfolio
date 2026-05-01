@@ -38,6 +38,7 @@ img {
   --font-family: "Pretendard Variable", serif;
   /*컬러 정의*/
   --primary-color: #e8c66a;
+  --hover-color: #d4b457;
   --box-color: #f5f5f5;
   --background-color: #ffffff;
   --text-color: #191919;
@@ -1583,12 +1584,17 @@ section .more_btn {
   justify-content: center;
   gap: 10px;
 }
-
+.btn_group .more_btn:hover {
+  background-color: var(--hover-color);
+  transform: translateY(-2px);
+}
 section .more_btn_bk {
   background: var(--box-color);
   color: var(--text-color);
 }
-
+.btn_group .more_btn_bk:hover {
+  background-color: #ddd;
+}
 section .more_btn img {
   width: 24px;
   transition: all 0.3s;
