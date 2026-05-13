@@ -74,7 +74,9 @@ body.dark-mode section .more_btn_bk {
   border-color: #3a342c;
   transition: all 0.3s;
 }
-
+body.dark-mode section .more_btn_bk:hover {
+  background-color: #312d28;
+}
 body.dark-mode header .header_container .mode_icon button img {
   filter: invert(1);
 }
@@ -196,6 +198,7 @@ header .header_container .header_logo {
   font-size: 24px;
   color: var(--text-color);
   font-weight: var(--font-weight-bold);
+  font-family: "Playfair Display", serif;
 }
 
 header .header_container .header_list {
@@ -670,7 +673,6 @@ footer {
   .list_body .main_shot {
     padding-bottom: 60px;
   }
-
 }
 
 @media (max-width: 600px) {

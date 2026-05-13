@@ -199,6 +199,7 @@
 
 .list_body .list_desc_group h2 {
   font-size: var(--font-size-subtitle);
+  font-family: var(--font-family);
 }
 
 .list_body .list_desc_group .list_desc {
