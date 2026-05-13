@@ -11,7 +11,9 @@ span {
   padding: 0;
   box-sizing: border-box;
 }
-
+body {
+  overscroll-behavior-y: none;
+}
 ul,
 ol,
 li {
