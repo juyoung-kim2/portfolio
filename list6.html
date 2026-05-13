@@ -8,7 +8,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/detail.css" />
+    <link rel="stylesheet" href="css/layout.css" />
     <link
       rel="stylesheet"
       as="style"
@@ -16,13 +18,14 @@
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&amp;display=swap"
       rel="stylesheet"
     />
   </head>
 
   <body>
     <header class="header" id="header"></header>
+    <main>
     <section class="list_visual">
       <img
         src="images/list/palette_list_top.png"
@@ -32,19 +35,19 @@
         <h1>PALETTE</h1>
       </div>
       <div class="move_arrow">
-        <img src="images/portfolio_arrow.svg" alt="화살표" />
+        <img src="images/portfolio_arrow.svg" alt="" />
       </div>
     </section>
     <section class="list_body">
       <div class="list_desc_group animate">
-        <h4>Palette Cake Studio</h4>
+        <h2>Palette Cake Studio</h2>
         <div class="list_desc">
           <div>
-            <h5>CLIENT</h5>
+            <p class="meta_label">CLIENT</p>
             <p>Palette (개인 프로젝트)</p>
           </div>
           <div>
-            <h5>RELEASE DATE</h5>
+            <p class="meta_label">RELEASE DATE</p>
             <p>2025.11 ~</p>
           </div>
         </div>
@@ -52,21 +55,21 @@
           <div>
             <p>[본인 역할]</p>
             <ul>
-              <li><b>기여도 100%</b></li>
+              <li><b>개인 프로젝트 / 기여도 100%</b></li>
               <li><b>서비스 기획 · UX 설계 · UI 디자인 전반 담당</b></li>
-              <li><b>모바일/PC 화면 구조 설계 및 인터랙션 흐름 정의</b></li>
+              <li><b>React 기반 반응형 화면 구현 및 인터랙션 흐름 정의</b></li>
             </ul>
           </div>
           <div>
             <p>[프로젝트 개요]</p>
             <ul>
               <li>
-                커스텀 케이크 주문 서비스를 주제로 한 UX/UI 디자인
+                커스텀 케이크 주문 서비스를 주제로 한 UX/UI 디자인 및 구현
                 프로젝트입니다.<br />
                 사용자가 옵션 선택부터 주문 완료까지의 과정을 직관적으로 이해할
                 수 있도록 전체 흐름을 단순화하였으며, 모바일·PC 환경 모두에서
                 동일한 경험을 제공할 수 있도록 화면 구조와 인터랙션을
-                설계했습니다. 특히 복잡한 옵션 선택 과정에서의 피로도를 최소화해
+                구현했습니다. 특히 복잡한 옵션 선택 과정에서의 피로도를 최소화해
                 사용자 중심의 편리한 주문 경험을 목표로 하였습니다.
               </li>
             </ul>
@@ -101,27 +104,27 @@
         <div class="btn_group">
           <a
             href="https://www.figma.com/design/yO4rVXjjIpjJvFzdziNckP/Palette-Cake-Studio?m=auto&t=Qi8COzAol953G1KC-1"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
             class="more_btn"
           >
             <span class="text">피그마 링크</span
-            ><img src="images/go_arrow.svg" alt="버튼화살표" />
+            ><img src="images/go_arrow.svg" alt="" />
           </a>
           <a
             href="https://palette-six-ecru.vercel.app/"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
             class="more_btn"
           >
             <span class="text">사이트 보기</span
-            ><img src="images/go_arrow.svg" alt="버튼화살표" />
+            ><img src="images/go_arrow.svg" alt="" />
           </a>
           <a
             href="https://meadow-cilantro-d1b.notion.site/29108dc6486580d2b53cfc439b9d64b4?pvs=74"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
             class="more_btn more_btn_bk"
           >
             <span class="text">자세히 보기</span
-            ><img src="images/go_arrow.svg" alt="버튼화살표" />
+            ><img src="images/go_arrow.svg" alt="" />
           </a>
         </div>
       </div>
@@ -144,18 +147,18 @@
           <div class="left_wrap">
             <a
               href="https://palette-six-ecru.vercel.app/"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               class="more_btn"
             >
               <span class="text">사이트 보기</span
-              ><img src="images/go_arrow.svg" alt="버튼화살표" />
+              ><img src="images/go_arrow.svg" alt="" />
             </a>
           </div>
 
           <div class="right_wrap">
             <div class="prev_btn"><a href="list4.html">PREV</a></div>
             <div class="list_btn">
-              <a href="index.html">
+              <a href="index.html" aria-label="포트폴리오 목록으로 돌아가기">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -165,9 +168,11 @@
         </div>
       </div>
     </section>
+    </main>
     <footer>
       <p>© 2026 Juyoung Kim. All rights reserved.</p>
     </footer>
+    <script src="./js/theme.js"></script>
     <script src="./js/load-header.js" defer></script>
     <script src="./js/sub.js"></script>
   </body>

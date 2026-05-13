@@ -8,7 +8,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/detail.css" />
+    <link rel="stylesheet" href="css/layout.css" />
     <link
       rel="stylesheet"
       as="style"
@@ -16,13 +18,14 @@
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&amp;display=swap"
       rel="stylesheet"
     />
   </head>
 
   <body>
     <header class="header" id="header"></header>
+    <main>
     <section class="list_visual">
       <img
         src="images/list/osung_list_top.png"
@@ -32,19 +35,19 @@
         <h1>PAINTSHOP</h1>
       </div>
       <div class="move_arrow">
-        <img src="images/portfolio_arrow.svg" alt="화살표" />
+        <img src="images/portfolio_arrow.svg" alt="" />
       </div>
     </section>
     <section class="list_body">
       <div class="list_desc_group animate">
-        <h4>페인트샵 쇼핑몰 리뉴얼</h4>
+        <h2>페인트샵 쇼핑몰 리뉴얼</h2>
         <div class="list_desc">
           <div>
-            <h5>CLIENT</h5>
+            <p class="meta_label">CLIENT</p>
             <p>(주)오성정밀화학</p>
           </div>
           <div>
-            <h5>RELEASE DATE</h5>
+            <p class="meta_label">RELEASE DATE</p>
             <p>2025.10</p>
           </div>
         </div>
@@ -52,9 +55,8 @@
           <div>
             <p>[본인 역할]</p>
             <ul>
-              <li><b>기여도 100%</b></li>
               <li>
-                <b>메인 UI 디자인부터 전 페이지 퍼블리싱까지 전 과정 담당</b>
+                <b>담당 범위: 메인 UI 디자인 및 전 페이지 퍼블리싱</b>
               </li>
             </ul>
           </div>
@@ -89,22 +91,22 @@
             <ul>
               <li>상품군 중심의 구조 개선을 통해 사용자 탐색 흐름 단순화</li>
               <li>직관적인 UI 구성으로 사용성 및 정보 전달력 향상에 기여</li>
-              <li>효율적인 레이아웃 구성으로 자연스러운 구매 흐름 형성</li>
+              <li>효율적인 레이아웃 구성으로 자연스러운 상품 탐색 흐름 형성</li>
             </ul>
           </div>
         </div>
         <div class="btn_group">
-          <a href="https://paintshopmro.com/" target="_blank" class="more_btn">
+          <a href="https://paintshopmro.com/" target="_blank" rel="noopener noreferrer" class="more_btn">
             <span class="text">사이트 보기</span
-            ><img src="images/go_arrow.svg" alt="버튼화살표" />
+            ><img src="images/go_arrow.svg" alt="" />
           </a>
           <a
             href="https://meadow-cilantro-d1b.notion.site/21c08dc6486580549f3cefafca35e147?source=copy_link"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
             class="more_btn more_btn_bk"
           >
             <span class="text">자세히 보기</span
-            ><img src="images/go_arrow.svg" alt="버튼화살표" />
+            ><img src="images/go_arrow.svg" alt="" />
           </a>
         </div>
       </div>
@@ -135,11 +137,11 @@
           <div class="left_wrap">
             <a
               href="https://paintshopmro.com/"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               class="more_btn"
             >
               <span class="text">사이트 보기</span
-              ><img src="images/go_arrow.svg" alt="버튼화살표" />
+              ><img src="images/go_arrow.svg" alt="" />
             </a>
           </div>
 
@@ -148,7 +150,7 @@
               <a href="list5.html" aria-label="이전 프로젝트 보기">PREV</a>
             </div>
             <div class="list_btn">
-              <a href="index.html">
+              <a href="index.html" aria-label="포트폴리오 목록으로 돌아가기">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -161,9 +163,11 @@
         </div>
       </div>
     </section>
+    </main>
     <footer>
       <p>© 2026 Juyoung Kim. All rights reserved.</p>
     </footer>
+    <script src="./js/theme.js"></script>
     <script src="./js/load-header.js" defer></script>
     <script src="./js/sub.js"></script>
   </body>

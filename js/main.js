@@ -1,62 +1,24 @@
-/*다크모드 전환*/
 document.addEventListener("DOMContentLoaded", () => {
-  const body = document.body;
-  const lightBtn = document.querySelectorAll(".mode_icon .light");
-  const nightBtn = document.querySelectorAll(".mode_icon .night");
+  window.portfolioTheme?.init();
 
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "dark") {
-    body.classList.add("dark-mode");
-  }
-
-  lightBtn.forEach(btn => {
-    btn.addEventListener('click', ()=> {
-      body.classList.remove('dark-mode');
-      localStorage.setItem('theme', 'light');
-    });
-  });
-
-  nightBtn.forEach(btn => {
-    btn.addEventListener('click', () => {
-      body.classList.add('dark-mode');
-      localStorage.setItem('theme', 'dark');
-    });
-  });
-});
-
-/*헤더 스타일*/
-window.addEventListener("scroll", function () {
-  const header = this.document.querySelector(".header");
-
-  if (this.window.scrollY > 50) {
-    header.classList.add("scrolled");
-  } else {
-    header.classList.remove("scrolled");
-  }
-});
-
-/*메인 비쥬얼 텍스트 변경 효과*/
-document.addEventListener("DOMContentLoaded", function () {
   const words = document.querySelectorAll(".change_word");
   const wordBox = document.querySelector(".word_box");
   let currentIndex = 0;
-  let isAnimating = false; // 애니메이션 상태 확인
+  let isAnimating = false;
 
   function showWord(index) {
-    if (isAnimating) return; // 애니메이션 중복 실행 방지
+    if (!words.length || !wordBox || isAnimating) return;
     isAnimating = true;
 
-    // 텍스트 변경 시마다 동적 width 계산
     const activeWord = words[index];
     wordBox.style.width = `${activeWord.offsetWidth}px`;
-    
+
     words.forEach((word, i) => {
       word.classList.toggle("on", i === index);
     });
 
-    // 애니메이션이 끝나면 isAnimating을 다시 false로 설정
     requestAnimationFrame(() => {
-    isAnimating = false;
+      isAnimating = false;
     });
   }
 
@@ -66,21 +28,18 @@ document.addEventListener("DOMContentLoaded", function () {
     currentIndex = (currentIndex + 1) % words.length;
     showWord(currentIndex);
   }, 3000);
-});
 
-
-/*경력 더보기 버튼*/
-document.addEventListener("DOMContentLoaded", function () {
   const careerLists = document.querySelectorAll(".career_list");
 
   careerLists.forEach((career) => {
     const items = career.querySelectorAll(".list_item");
     const button = career.querySelector(".more_btn");
-    const textEl = button.querySelector(".text");
-
     if (!items.length || !button) return;
 
+    const textEl = button.querySelector(".text");
     let isExpanded = false;
+
+    button.setAttribute("aria-expanded", "false");
 
     items.forEach((item, index) => {
       if (index < 2) {
@@ -99,66 +58,58 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
 
-      textEl.textContent = isExpanded ? "접기" : "더보기";
+      if (textEl) {
+        textEl.textContent = isExpanded ? "접기" : "더보기";
+      }
       button.classList.toggle("expanded", isExpanded);
+      button.setAttribute("aria-expanded", String(isExpanded));
     });
   });
-});
 
-/*모바일 사이드 메뉴*/
-const hamOpen = document.querySelector("#ham_open"); // 열기
-const hamClose = document.querySelector("#ham_close"); // 닫기
-const mobileNav = document.querySelector(".mobile_nav");
-const overlay = document.querySelector(".overlay");
+  const hamOpen = document.querySelector("#ham_open");
+  const hamClose = document.querySelector("#ham_close");
+  const mobileNav = document.querySelector(".mobile_nav");
+  const overlay = document.querySelector(".overlay");
 
-// 열기 버튼 클릭
-if (hamOpen && mobileNav && overlay) {
-  hamOpen.addEventListener("click", () => {
-    mobileNav.classList.add("active");
-    overlay.classList.add("active");
-    document.body.style.overflow = "hidden";
-  });
-}
+  function setMenuState(isOpen) {
+    mobileNav.classList.toggle("active", isOpen);
+    overlay.classList.toggle("active", isOpen);
+    hamOpen.setAttribute("aria-expanded", String(isOpen));
+    document.body.style.overflow = isOpen ? "hidden" : "";
+  }
 
-function closeMenu() {
-  mobileNav.classList.remove("active");
-  overlay.classList.remove("active");
-  document.body.style.overflow = "";
-}
+  if (hamOpen && hamClose && mobileNav && overlay) {
+    hamOpen.addEventListener("click", () => setMenuState(true));
+    hamClose.addEventListener("click", () => setMenuState(false));
+    overlay.addEventListener("click", () => setMenuState(false));
+  }
 
-if (hamClose) {
-  hamClose.addEventListener("click", closeMenu);
-}
-if (overlay) {
-  overlay.addEventListener("click", closeMenu);
-}
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      const targetId = this.getAttribute("href");
 
-/*스크롤 헤더 높이 감지*/
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    const targetId = this.getAttribute("href");
+      if (targetId === "#") return;
 
-    if (targetId === "#") return;
+      e.preventDefault();
 
-    e.preventDefault();
+      const targetEl = document.querySelector(targetId);
+      const headerHeight = document.querySelector(".header")?.offsetHeight ?? 0;
+      if (!targetEl) return;
 
-    const targetEl = document.querySelector(targetId);
-    const headerHeight = document.querySelector(".header").offsetHeight;
+      const elementPosition = targetEl.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - headerHeight;
 
-    const elementPosition = targetEl.getBoundingClientRect().top;
-    const offsetPosition = elementPosition + window.scrollY - headerHeight;
-
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: "smooth",
+      setMenuState(false);
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
     });
   });
-});
 
-window.addEventListener("load", () => {
   const fadeEls = document.querySelectorAll(".fade-in");
 
-  fadeEls.forEach((el, index) => {
+  fadeEls.forEach((el) => {
     setTimeout(() => {
       el.classList.add("show");
     });

@@ -30,7 +30,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/layout.css" />
     <link
       rel="stylesheet"
       as="style"
@@ -38,7 +40,7 @@
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&amp;display=swap"
       rel="stylesheet"
     />
   </head>
@@ -46,9 +48,9 @@
   <body id="main">
     <header class="header">
       <div class="header_container">
-        <h1 class="header_logo">
+        <div class="header_logo">
           <a href="index.html">Juyoung's portfolio</a>
-        </h1>
+        </div>
         <nav class="header_list" aria-label="메인 네비게이션">
           <ul>
             <li><a href="#">Home</a></li>
@@ -58,18 +60,25 @@
           </ul>
         </nav>
         <div class="mode_icon">
-          <div class="light">
+          <button class="light" type="button" data-theme-toggle="light" aria-label="라이트 모드로 전환">
             <img src="images/light_mode_icon.png" alt="라이트모드 아이콘" />
-          </div>
-          <div class="night">
+          </button>
+          <button class="night" type="button" data-theme-toggle="dark" aria-label="다크 모드로 전환">
             <img src="images/dark_mode_icon.png" alt="다크모드 아이콘" />
-          </div>
+          </button>
           <div class="ham_menu">
-            <div class="ham_container" id="ham_open">
+            <button
+              class="ham_container"
+              id="ham_open"
+              type="button"
+              aria-controls="mobile_nav"
+              aria-expanded="false"
+              aria-label="모바일 메뉴 열기"
+            >
               <span class="bar"></span>
               <span class="bar"></span>
               <span class="bar"></span>
-            </div>
+            </button>
           </div>
         </div>
       </div>
@@ -77,19 +86,25 @@
 
     <!-- 햄버거 메뉴 클릭 시 나타나는 모바일 네비 -->
     <div class="overlay"></div>
-    <nav class="mobile_nav">
+    <nav class="mobile_nav" id="mobile_nav" aria-label="모바일 네비게이션">
       <div class="mode_icon">
-        <div class="light">
+        <button class="light" type="button" data-theme-toggle="light" aria-label="라이트 모드로 전환">
           <img src="images/light_mode_icon.png" alt="라이트모드 아이콘" />
-        </div>
-        <div class="night">
+        </button>
+        <button class="night" type="button" data-theme-toggle="dark" aria-label="다크 모드로 전환">
           <img src="images/dark_mode_icon.png" alt="다크모드 아이콘" />
-        </div>
+        </button>
         <div class="ham_menu">
-          <div class="ham_container" id="ham_close">
+          <button
+            class="ham_container"
+            id="ham_close"
+            type="button"
+            aria-controls="mobile_nav"
+            aria-label="모바일 메뉴 닫기"
+          >
             <span class="bar"></span>
             <span class="bar"></span>
-          </div>
+          </button>
         </div>
       </div>
       <ul>
@@ -103,10 +118,10 @@
     <main>
       <section class="main_visual">
         <div class="main_visual_wrap fade-in">
-          <div class="main_visual_title">
-            <h1>Juyoung's</h1>
-            <div class="change_words">
-              <div class="word_box title-en">
+          <h1 class="main_visual_title">
+            <span class="visual_title_text">Juyoung's</span>
+            <span class="change_words">
+              <span class="word_box title-en">
                 <span class="change_word">
                   <span class="char">U</span>
                   <span class="char">I</span>
@@ -122,10 +137,10 @@
                   <span class="char">G</span>
                   <span class="char">N</span>
                 </span>
-              </div>
-            </div>
-            <h1>portfolio</h1>
-          </div>
+              </span>
+            </span>
+            <span class="visual_title_text">portfolio</span>
+          </h1>
           <p>
             디자인 의도를 정확하게 구현하고,<br />
             사용자의 흐름을 고려한 웹 경험을 만듭니다.
@@ -223,7 +238,7 @@
               <p class="year">2026년</p>
               <div class="list_group">
                 <div class="list_item">
-                  <h5>[26.01~] 큐브엔터테인먼트 쇼핑몰 리뉴얼</h5>
+                  <h4>[26.01~] 큐브엔터테인먼트 쇼핑몰 리뉴얼</h4>
                   <ul>
                     <li>
                       - 메인 UI 디자인 및 전 페이지 퍼블리싱 담당 (HTML, CSS,
@@ -232,20 +247,20 @@
                   </ul>
                 </div>
                 <div class="list_item">
-                  <h5>[26.01~] 땡스소윤 쇼핑몰 리뉴얼</h5>
+                  <h4>[26.01~] 땡스소윤 쇼핑몰 리뉴얼</h4>
                   <ul>
                     <li>- 전 페이지 퍼블리싱 담당 (HTML, CSS, JavaScript)</li>
                   </ul>
                 </div>
                 <div class="list_item">
-                  <h5>[26.01~] 키소주 쇼핑몰 리뉴얼</h5>
+                  <h4>[26.01~] 키소주 쇼핑몰 리뉴얼</h4>
                   <ul>
                     <li>- 전 페이지 퍼블리싱 담당 (HTML, CSS, JavaScript)</li>
                   </ul>
                 </div>
                 <button class="more_btn" aria-label="더보기">
                   <span class="text">더보기</span
-                  ><img src="images/more_arrow.svg" alt="버튼화살표" />
+                  ><img src="images/more_arrow.svg" alt="" />
                 </button>
               </div>
             </div>
@@ -254,7 +269,7 @@
               <p class="year">2025년</p>
               <div class="list_group">
                 <div class="list_item">
-                  <h5>[25.11~] 자사 ERP 시스템</h5>
+                  <h4>[25.11~] 자사 ERP 시스템</h4>
                   <ul>
                     <li>
                       - ERP 시스템 기획 및 UI 구조 설계, 메인 UI 디자인과 전
@@ -263,13 +278,13 @@
                   </ul>
                 </div>
                 <div class="list_item">
-                  <h5>[25.04~] 안상규 벌꿀 유지보수</h5>
+                  <h4>[25.04~] 안상규 벌꿀 유지보수</h4>
                   <ul>
                     <li>- 사이트 유지보수 관리</li>
                   </ul>
                 </div>
                 <div class="list_item">
-                  <h5>[25.02~25.11] 미즈노 브랜드 & 쇼핑몰 리뉴얼</h5>
+                  <h4>[25.02~25.11] 미즈노 브랜드 & 쇼핑몰 리뉴얼</h4>
                   <ul>
                     <li>
                       - 메인 UI 디자인 및 일부 페이지 퍼블리싱 담당 (HTML, CSS,
@@ -278,19 +293,19 @@
                   </ul>
                 </div>
                 <div class="list_item">
-                  <h5>[25.06.~25.11] 스킨튠 쇼핑몰 신규 구축</h5>
+                  <h4>[25.06.~25.11] 스킨튠 쇼핑몰 신규 구축</h4>
                   <ul>
                     <li>- 전 페이지 퍼블리싱 담당 (HTML, CSS, JavaScript)</li>
                   </ul>
                 </div>
                 <div class="list_item">
-                  <h5>[25.04.~25.10] 스쿨380 쇼핑몰 신규 구축</h5>
+                  <h4>[25.04.~25.10] 스쿨380 쇼핑몰 신규 구축</h4>
                   <ul>
                     <li>- 전 페이지 퍼블리싱 담당 (HTML, CSS, JavaScript)</li>
                   </ul>
                 </div>
                 <div class="list_item">
-                  <h5>[25.06.~25.10] 파이드 쇼핑몰 리뉴얼</h5>
+                  <h4>[25.06.~25.10] 파이드 쇼핑몰 리뉴얼</h4>
                   <ul>
                     <li>
                       - 메인 UI 디자인 및 전 페이지 퍼블리싱 담당 (HTML, CSS,
@@ -299,7 +314,7 @@
                   </ul>
                 </div>
                 <div class="list_item">
-                  <h5>[25.04.~25.10] 페인트샵 쇼핑몰 리뉴얼</h5>
+                  <h4>[25.04.~25.10] 페인트샵 쇼핑몰 리뉴얼</h4>
                   <ul>
                     <li>
                       - 메인 UI 디자인 및 전 페이지 퍼블리싱 담당 (HTML, CSS,
@@ -308,7 +323,7 @@
                   </ul>
                 </div>
                 <div class="list_item">
-                  <h5>[25.04~25.09] 오프앤온 쇼핑몰 신규 구축</h5>
+                  <h4>[25.04~25.09] 오프앤온 쇼핑몰 신규 구축</h4>
                   <ul>
                     <li>
                       - 메인 UI 디자인 및 전 페이지 퍼블리싱 담당 (HTML, CSS,
@@ -317,7 +332,7 @@
                   </ul>
                 </div>
                 <div class="list_item">
-                  <h5>[25.02~25.07] 빈디자인 쇼핑몰 신규 구축</h5>
+                  <h4>[25.02~25.07] 빈디자인 쇼핑몰 신규 구축</h4>
                   <ul>
                     <li>
                       - 메인 UI 디자인 및 전 페이지 퍼블리싱 담당 (HTML, CSS,
@@ -326,7 +341,7 @@
                   </ul>
                 </div>
                 <div class="list_item">
-                  <h5>[25.01~25.04] 아모스아인스 쇼핑몰 리뉴얼</h5>
+                  <h4>[25.01~25.04] 아모스아인스 쇼핑몰 리뉴얼</h4>
                   <ul>
                     <li>
                       - 메인 UI 디자인 및 전 페이지 퍼블리싱 담당 (HTML, CSS,
@@ -335,7 +350,7 @@
                   </ul>
                 </div>
                 <div class="list_item">
-                  <h5>[24.11~25.04] 유닉스 쇼핑몰 신규 구축</h5>
+                  <h4>[24.11~25.04] 유닉스 쇼핑몰 신규 구축</h4>
                   <ul>
                     <li>- 일부 페이지 퍼블리싱 담당 (HTML, CSS, JavaScript)</li>
                   </ul>
@@ -343,7 +358,7 @@
               </div>
               <button class="more_btn" aria-label="더보기">
                 <span class="text">더보기</span
-                ><img src="images/more_arrow.svg" alt="버튼화살표" />
+                ><img src="images/more_arrow.svg" alt="" />
               </button>
             </div>
 
@@ -351,49 +366,49 @@
               <p class="year">2024년</p>
               <div class="list_group">
                 <div class="list_item">
-                  <h5>[24.08~24.12] 이메이션 쇼핑몰 신규 구축</h5>
+                  <h4>[24.08~24.12] 이메이션 쇼핑몰 신규 구축</h4>
                   <ul>
                     <li>- 일부 페이지 퍼블리싱 담당 (HTML, CSS, JavaScript)</li>
                   </ul>
                 </div>
                 <div class="list_item">
-                  <h5>[24.09~24.12] 마켓비 쇼핑몰 리뉴얼</h5>
+                  <h4>[24.09~24.12] 마켓비 쇼핑몰 리뉴얼</h4>
                   <ul>
                     <li>- 메인 UI 디자인 담당</li>
                   </ul>
                 </div>
                 <div class="list_item">
-                  <h5>[24.07~24.10] 마이나인피엠 쇼핑몰 리뉴얼</h5>
+                  <h4>[24.07~24.10] 마이나인피엠 쇼핑몰 리뉴얼</h4>
                   <ul>
                     <li>- 전 페이지 퍼블리싱 담당 (HTML, CSS, JavaScript)</li>
                   </ul>
                 </div>
                 <div class="list_item">
-                  <h5>[23.11~24.07] 까비네 쇼핑몰 리뉴얼</h5>
+                  <h4>[23.11~24.07] 까비네 쇼핑몰 리뉴얼</h4>
                   <ul>
                     <li>- 메인 UI 디자인 담당</li>
                   </ul>
                 </div>
                 <div class="list_item">
-                  <h5>[24.02~24.05] 파리크라상 홈페이지 리뉴얼</h5>
+                  <h4>[24.02~24.05] 파리크라상 홈페이지 리뉴얼</h4>
                   <ul>
                     <li>- 전 페이지 퍼블리싱 담당 (HTML, CSS, JavaScript)</li>
                   </ul>
                 </div>
                 <div class="list_item">
-                  <h5>[23.10~24.02] HDEX 쇼핑몰 리뉴얼</h5>
+                  <h4>[23.10~24.02] HDEX 쇼핑몰 리뉴얼</h4>
                   <ul>
                     <li>- 메인 UI 디자인 담당</li>
                   </ul>
                 </div>
                 <div class="list_item">
-                  <h5>[24.10~25.02] 케어웰 쇼핑몰 리뉴얼</h5>
+                  <h4>[24.10~25.02] 케어웰 쇼핑몰 리뉴얼</h4>
                   <ul>
                     <li>- 전 페이지 퍼블리싱 담당 (HTML, CSS, JavaScript)</li>
                   </ul>
                 </div>
                 <div class="list_item">
-                  <h5>[24.08~25.02] 콜포유 사이트 리뉴얼</h5>
+                  <h4>[24.08~25.02] 콜포유 사이트 리뉴얼</h4>
                   <ul>
                     <li>- 전 페이지 퍼블리싱 담당 (HTML, CSS, JavaScript)</li>
                   </ul>
@@ -401,7 +416,7 @@
               </div>
               <button class="more_btn" aria-label="더보기">
                 <span class="text">더보기</span
-                ><img src="images/more_arrow.svg" alt="버튼화살표" />
+                ><img src="images/more_arrow.svg" alt="" />
               </button>
             </div>
 
@@ -409,25 +424,25 @@
               <p class="year">2023년</p>
               <div class="list_group">
                 <div class="list_item">
-                  <h5>[23.09~24.02] 사운드웨이브 쇼핑몰 리뉴얼</h5>
+                  <h4>[23.09~24.02] 사운드웨이브 쇼핑몰 리뉴얼</h4>
                   <ul>
                     <li>- 메인 UI 디자인 담당</li>
                   </ul>
                 </div>
                 <div class="list_item">
-                  <h5>[23.06~23.10] 맑은샘 쇼핑몰 리뉴얼</h5>
+                  <h4>[23.06~23.10] 맑은샘 쇼핑몰 리뉴얼</h4>
                   <ul>
                     <li>- 메인 UI 디자인 담당</li>
                   </ul>
                 </div>
                 <div class="list_item">
-                  <h5>[23.05~23.07] 씨스팡 쇼핑몰 리뉴얼</h5>
+                  <h4>[23.05~23.07] 씨스팡 쇼핑몰 리뉴얼</h4>
                   <ul>
                     <li>- 메인 UI 디자인 담당</li>
                   </ul>
                 </div>
                 <div class="list_item">
-                  <h5>[23.08~23.10] XIX 쇼핑몰 리뉴얼</h5>
+                  <h4>[23.08~23.10] XIX 쇼핑몰 리뉴얼</h4>
                   <ul>
                     <li>- 메인 UI 디자인 담당</li>
                   </ul>
@@ -435,7 +450,7 @@
               </div>
               <button class="more_btn" aria-label="더보기">
                 <span class="text">더보기</span
-                ><img src="images/more_arrow.svg" alt="버튼화살표" />
+                ><img src="images/more_arrow.svg" alt="" />
               </button>
             </div>
           </div>
@@ -451,7 +466,7 @@
           <!--리스트1-->
           <div class="portfolio_item">
             <div class="img_wrap">
-              <img src="images/list/erp_list.png" alt="프로젝트 썸네일" />
+              <img src="images/list/erp_list.png" alt="회사 ERP 시스템 디자인 썸네일" />
             </div>
             <div class="text_wrap">
               <h4>회사 ERP 시스템 디자인</h4>
@@ -463,8 +478,8 @@
               </div>
             </div>
             <div class="circle_btn_wrap">
-              <a class="circle_btn" href="list5.html">
-                <img src="images/portfolio_arrow.png" alt="버튼화살표" />
+              <a class="circle_btn" href="list5.html" aria-label="회사 ERP 시스템 디자인 상세 보기">
+                <img src="images/portfolio_arrow.png" alt="" />
               </a>
             </div>
           </div>
@@ -472,7 +487,7 @@
           <!--리스트2-->
           <div class="portfolio_item">
             <div class="img_wrap">
-              <img src="images/list/osung_list.png" alt="프로젝트 썸네일" />
+              <img src="images/list/osung_list.png" alt="페인트샵 쇼핑몰 리뉴얼 썸네일" />
             </div>
             <div class="text_wrap">
               <h4>페인트샵 쇼핑몰 리뉴얼</h4>
@@ -484,8 +499,8 @@
               </div>
             </div>
             <div class="circle_btn_wrap">
-              <a class="circle_btn" href="list2.html">
-                <img src="images/portfolio_arrow.png" alt="버튼화살표" />
+              <a class="circle_btn" href="list2.html" aria-label="페인트샵 쇼핑몰 리뉴얼 상세 보기">
+                <img src="images/portfolio_arrow.png" alt="" />
               </a>
             </div>
           </div>
@@ -493,7 +508,7 @@
           <!--리스트3-->
           <div class="portfolio_item">
             <div class="img_wrap">
-              <img src="images/list/fied_list.png" alt="프로젝트 썸네일" />
+              <img src="images/list/fied_list.png" alt="파이드 쇼핑몰 리뉴얼 썸네일" />
             </div>
             <div class="text_wrap">
               <h4>파이드 쇼핑몰 리뉴얼</h4>
@@ -505,8 +520,8 @@
               </div>
             </div>
             <div class="circle_btn_wrap">
-              <a class="circle_btn" href="list3.html">
-                <img src="images/portfolio_arrow.png" alt="버튼화살표" />
+              <a class="circle_btn" href="list3.html" aria-label="파이드 쇼핑몰 리뉴얼 상세 보기">
+                <img src="images/portfolio_arrow.png" alt="" />
               </a>
             </div>
           </div>
@@ -514,7 +529,7 @@
           <!--리스트4-->
           <div class="portfolio_item">
             <div class="img_wrap">
-              <img src="images/list/amos_list.png" alt="프로젝트 썸네일" />
+              <img src="images/list/amos_list.png" alt="아모스아인스 쇼핑몰 리뉴얼 썸네일" />
             </div>
             <div class="text_wrap">
               <h4>아모스아인스 쇼핑몰 리뉴얼</h4>
@@ -526,8 +541,8 @@
               </div>
             </div>
             <div class="circle_btn_wrap">
-              <a class="circle_btn" href="list1.html">
-                <img src="images/portfolio_arrow.png" alt="버튼화살표" />
+              <a class="circle_btn" href="list1.html" aria-label="아모스아인스 쇼핑몰 리뉴얼 상세 보기">
+                <img src="images/portfolio_arrow.png" alt="" />
               </a>
             </div>
           </div>
@@ -535,10 +550,10 @@
           <!--리스트5-->
           <div class="portfolio_item">
             <div class="img_wrap">
-              <img src="images/list/offnon_list.png" alt="프로젝트 썸네일" />
+              <img src="images/list/offnon_list.png" alt="오프앤온 쇼핑몰 신규 구축 썸네일" />
             </div>
             <div class="text_wrap">
-              <h4>오프앤온 쇼핑몰 오픈</h4>
+              <h4>오프앤온 쇼핑몰 신규 구축</h4>
               <p>UI 디자인</p>
               <p class="skill">퍼블리싱</p>
               <div class="tags">
@@ -547,8 +562,8 @@
               </div>
             </div>
             <div class="circle_btn_wrap">
-              <a class="circle_btn" href="list4.html">
-                <img src="images/portfolio_arrow.png" alt="버튼화살표" />
+              <a class="circle_btn" href="list4.html" aria-label="오프앤온 쇼핑몰 신규 구축 상세 보기">
+                <img src="images/portfolio_arrow.png" alt="" />
               </a>
             </div>
           </div>
@@ -556,7 +571,7 @@
           <!--리스트6-->
           <div class="portfolio_item">
             <div class="img_wrap">
-              <img src="images/list/palette_list.png" alt="프로젝트 썸네일" />
+              <img src="images/list/palette_list.png" alt="Palette Cake Studio 썸네일" />
             </div>
             <div class="text_wrap">
               <h4>Palette Cake Studio</h4>
@@ -569,8 +584,8 @@
               </div>
             </div>
             <div class="circle_btn_wrap">
-              <a class="circle_btn" href="list6.html">
-                <img src="images/portfolio_arrow.png" alt="버튼화살표" />
+              <a class="circle_btn" href="list6.html" aria-label="Palette Cake Studio 상세 보기">
+                <img src="images/portfolio_arrow.png" alt="" />
               </a>
             </div>
             <div></div>
@@ -603,6 +618,7 @@
     <footer>
       <p>© 2026 Juyoung Kim. All rights reserved.</p>
     </footer>
+    <script src="./js/theme.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

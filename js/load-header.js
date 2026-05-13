@@ -1,6 +1,5 @@
-// load-header.js
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("/portfolio/sub_header.html")
+  fetch("sub_header.html")
     .then((res) => {
       if (!res.ok) throw new Error("헤더를 불러오지 못했습니다.");
       return res.text();
@@ -9,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const headerContainer = document.getElementById("header");
       if (headerContainer) {
         headerContainer.innerHTML = data;
-        initDarkMode();
+        window.portfolioTheme?.init();
       }
     })
     .catch((err) => console.error("헤더 로딩 오류:", err));
