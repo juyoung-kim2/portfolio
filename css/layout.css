@@ -540,7 +540,7 @@ footer {
 @media (max-width: 1000px) {
   .main_visual .main_visual_wrap .main_visual_title {
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     margin-bottom: 40px;
   }
 
@@ -784,6 +784,7 @@ footer {
   section .btn_group {
     align-items: flex-start;
     gap: 12px;
+    flex-wrap: wrap;
   }
 
   section .more_btn {

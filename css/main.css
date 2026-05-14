@@ -101,7 +101,7 @@
   content: "[";
   display: block;
   font-weight: var(--font-weight-regular);
-  top: 0px;
+  top: -4px;
   left: -2px;
   position: relative;
 }
@@ -110,7 +110,7 @@
   content: "]";
   display: block;
   font-weight: var(--font-weight-regular);
-  top: 0px;
+  top: -4px;
   left: 2px;
   position: relative;
 }
