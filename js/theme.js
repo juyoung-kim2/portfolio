@@ -3,7 +3,7 @@ const DARK_MODE_CLASS = "dark-mode";
 
 function getPreferredTheme() {
   const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
-
+  console.log(savedTheme);
   if (savedTheme === "dark" || savedTheme === "light") {
     return savedTheme;
   }

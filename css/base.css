@@ -77,7 +77,7 @@ img {
   --font-weight-black: 900;
 }
 
-@media (prefers-color-scheme: dark) {
+[data-theme="dark"] {
   :root {
     --primary-color: #e8c66a;
     --box-color: #2e2e2e;
