@@ -78,13 +78,11 @@ img {
 }
 
 [data-theme="dark"] {
-  :root {
-    --primary-color: #e8c66a;
-    --box-color: #2e2e2e;
-    --background-color: #1e1e1e;
-    --text-color: #ffffff;
-    --text-sub-color: #a8a8a8;
-  }
+  --primary-color: #e8c66a;
+  --box-color: #2e2e2e;
+  --background-color: #1e1e1e;
+  --text-color: #ffffff;
+  --text-sub-color: #a8a8a8;
 }
 
 html {

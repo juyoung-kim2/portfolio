@@ -71,7 +71,6 @@ body.dark-mode
 body.dark-mode section .more_btn_bk {
   background: #3a342c;
   color: #ffffff;
-  border-color: #3a342c;
   transition: all 0.3s;
 }
 body.dark-mode section .more_btn_bk:hover {
@@ -527,13 +526,16 @@ footer {
   }
 
   header .header_container .mode_icon div.ham_menu {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .list_visual .logo_wrap h1 {
     font-size: 5.5vw;
     text-align: center;
     letter-spacing: 0.8em;
+    text-indent: 0.8em;
   }
 }
 

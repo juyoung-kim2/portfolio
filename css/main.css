@@ -125,6 +125,10 @@
   transform: translateY(130px);
   transition: transform 0.8s;
   margin: 0 2px;
+  display: inline-block;
+
+  -webkit-transform: translateY(130px);
+  -webkit-transition: -webkit-transform 0.8s;
 }
 
 .main_visual
@@ -289,10 +293,11 @@
   padding: 60px;
 }
 
-.about_section .about_top .about_top_container .right_wrap h4 {
+.about_section .about_top .about_top_container .right_wrap h3 {
   font-weight: var(--font-weight-semibold);
   margin-bottom: 40px;
   font-size: var(--font-size-lg);
+  font-family: var(--font-family);
 }
 
 .about_section .about_top .about_top_container .right_wrap p {
