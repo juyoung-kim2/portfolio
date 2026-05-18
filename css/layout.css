@@ -331,6 +331,7 @@ header.scrolled .sub_header_container .mode_icon button img {
   height: 24px;
   padding: 0;
   position: relative;
+  display: flex;
 }
 
 .mobile_nav .mode_icon div.ham_menu .ham_container .bar {
