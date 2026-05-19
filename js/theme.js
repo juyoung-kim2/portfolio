@@ -80,3 +80,24 @@ window.portfolioTheme = {
 window.addEventListener("resize", () => {
   window.portfolioTheme.refreshImages();
 });
+
+// top 버튼 추가
+window.addEventListener("load", () => {
+  const topBtn = document.createElement("button");
+  topBtn.innerHTML = `<img src="images/portfolio_arrow.png" alt="화살표" />`;
+  topBtn.className = "top-btn";
+
+  document.body.appendChild(topBtn);
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      topBtn.classList.add("show");
+    } else {
+      topBtn.classList.remove("show");
+    }
+  });
+
+  topBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});

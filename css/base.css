@@ -109,3 +109,44 @@ h3,
 .title-en {
   font-family: "Playfair Display", serif;
 }
+
+.top-btn {
+  position: fixed;
+  right: 25px;
+  bottom: 100px;
+  z-index: 9999;
+  font-size: 13px;
+  font-weight: var(--font-weight-semibold);
+  background-color: var(--box-color);
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+  width: 52px;
+  height: 52px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-90deg);
+}
+.top-btn img {
+  transition: all 0.3s ease;
+  width: 12px;
+}
+/* PC에서만 호버 적용 */
+@media (hover: hover) {
+  .top-btn:hover img {
+    filter: invert(1);
+  }
+}
+
+.top-btn:active img {
+  filter: invert(1);
+}
+.top-btn.show {
+  opacity: 1;
+  visibility: visible;
+}
