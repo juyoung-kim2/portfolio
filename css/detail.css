@@ -177,15 +177,6 @@
   opacity: 1;
 }
 
-@keyframes UpDownMove {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
 @-webkit-keyframes UpDownMove {
   0%,
   100% {
@@ -195,7 +186,7 @@
     transform: translateY(-10px);
   }
 }
-@-moz-keyframes UpDownMove {
+@keyframes UpDownMove {
   0%,
   100% {
     transform: translateY(0);
@@ -204,15 +195,7 @@
     transform: translateY(-10px);
   }
 }
-@-o-keyframes UpDownMove {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
+
 .list_body {
   margin-top: 100vh;
   background: var(--background-color);

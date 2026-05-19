@@ -135,16 +135,20 @@ h3,
 .top-btn img {
   transition: all 0.3s ease;
   width: 12px;
+  filter: invert(1);
+  opacity: 0.5;
 }
 /* PC에서만 호버 적용 */
 @media (hover: hover) {
   .top-btn:hover img {
-    filter: invert(1);
+    opacity: 1;
   }
 }
-
+body.dark-mode .top-btn img {
+  filter: invert(0);
+}
 .top-btn:active img {
-  filter: invert(1);
+  opacity: 1;
 }
 .top-btn.show {
   opacity: 1;
