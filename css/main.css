@@ -73,7 +73,6 @@
 
 .main_visual .main_visual_wrap .main_visual_title .change_words {
   font-size: var(--font-size-title-lg);
-  height: 100px;
   font-weight: var(--font-weight-bold);
   position: relative;
   display: flex;
@@ -95,6 +94,7 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  white-space: nowrap !important;
 }
 
 .main_visual .main_visual_wrap .main_visual_title .change_words:before {
@@ -126,9 +126,11 @@
   transition: transform 0.8s;
   margin: 0 2px;
   display: inline-block;
-
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   -webkit-transform: translateY(130px);
   -webkit-transition: -webkit-transform 0.8s;
+  will-change: transform;
 }
 
 .main_visual
@@ -139,106 +141,6 @@
   .change_word.on
   .char {
   transform: translateY(0);
-}
-
-.main_visual
-  .main_visual_wrap
-  .main_visual_title
-  .change_words
-  .word_box
-  .change_word.on
-  .char:nth-child(1) {
-  transition-delay: 0.035s;
-}
-
-.main_visual
-  .main_visual_wrap
-  .main_visual_title
-  .change_words
-  .word_box
-  .change_word.on
-  .char:nth-child(2) {
-  transition-delay: 0.7s;
-}
-
-.main_visual
-  .main_visual_wrap
-  .main_visual_title
-  .change_words
-  .word_box
-  .change_word.on
-  .char:nth-child(3) {
-  transition-delay: 1.05s;
-}
-
-.main_visual
-  .main_visual_wrap
-  .main_visual_title
-  .change_words
-  .word_box
-  .change_word.on
-  .char:nth-child(4) {
-  transition-delay: 1.14s;
-}
-
-.main_visual
-  .main_visual_wrap
-  .main_visual_title
-  .change_words
-  .word_box
-  .change_word.on
-  .char:nth-child(5) {
-  transition-delay: 1.175s;
-}
-
-.main_visual
-  .main_visual_wrap
-  .main_visual_title
-  .change_words
-  .word_box
-  .change_word.on
-  .char:nth-child(6) {
-  transition-delay: 1.21s;
-}
-
-.main_visual
-  .main_visual_wrap
-  .main_visual_title
-  .change_words
-  .word_box
-  .change_word.on
-  .char:nth-child(7) {
-  transition-delay: 1.245s;
-}
-
-.main_visual
-  .main_visual_wrap
-  .main_visual_title
-  .change_words
-  .word_box
-  .change_word.on
-  .char:nth-child(8) {
-  transition-delay: 1.275s;
-}
-
-.main_visual
-  .main_visual_wrap
-  .main_visual_title
-  .change_words
-  .word_box
-  .change_word.on
-  .char:nth-child(9) {
-  transition-delay: 1.31s;
-}
-
-.main_visual
-  .main_visual_wrap
-  .main_visual_title
-  .change_words
-  .word_box
-  .change_word.on
-  .char:nth-child(10) {
-  transition-delay: 1.345s;
 }
 
 .main_visual .main_visual_wrap p {

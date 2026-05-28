@@ -462,10 +462,6 @@ footer {
     --font-size-md: 16px;
   }
 
-  .main_visual .main_visual_wrap .main_visual_title .change_words {
-    height: 80px;
-  }
-
   .about_section,
   .portfolio_section {
     max-width: 1200px;
@@ -483,10 +479,6 @@ footer {
 
   .portfolio_section .portfolio_container {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .main_visual .main_visual_wrap .main_visual_title .change_words {
-    height: 70px;
   }
 
   .about_section,

@@ -3,22 +3,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const words = document.querySelectorAll(".change_word");
   const wordBox = document.querySelector(".word_box");
+
   let currentIndex = 0;
   let isAnimating = false;
 
+  // [개선] 각 단어 내부 글자들에게 순서대로 딜레이 주기 (이전에는 css로 개별 적용함)
+  words.forEach((word) => {
+    const chars = word.querySelectorAll(".char");
+    chars.forEach((char, index) => {
+      char.style.transitionDelay = `${index * 0.06}s`;
+    });
+  });
   function showWord(index) {
     if (!words.length || !wordBox || isAnimating) return;
     isAnimating = true;
 
     const activeWord = words[index];
-    wordBox.style.width = `${activeWord.offsetWidth}px`;
-
-    words.forEach((word, i) => {
-      word.classList.toggle("on", i === index);
-    });
 
     requestAnimationFrame(() => {
-      isAnimating = false;
+      requestAnimationFrame(() => {
+        wordBox.style.width = `${activeWord.offsetWidth + 4}px`;
+
+        words.forEach((word, i) => {
+          word.classList.toggle("on", i === index);
+        });
+
+        setTimeout(() => {
+          isAnimating = false;
+        }, 600);
+      });
     });
   }
 
@@ -96,8 +109,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const headerHeight = document.querySelector(".header")?.offsetHeight ?? 0;
       if (!targetEl) return;
 
-      const elementPosition = targetEl.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.scrollY - headerHeight;
+      //const elementPosition = targetEl.offsetTop();
+      const offsetPosition = targetEl.offsetTop - headerHeight;
 
       setMenuState(false);
       window.scrollTo({
