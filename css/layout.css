@@ -241,15 +241,22 @@ header.scrolled {
   background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(5px);
 }
-
+header.scrolled .sub_header_container {
+  background: none;
+}
 /*서브페이지 헤더 스타일*/
+header .sub_header_container {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5) 0%,
+    transparent 100%
+  );
+}
 header .sub_header_container .header_logo {
   color: #fff;
   transition: all 0.3s ease;
 }
-header .sub_header_container .header_logo a {
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
-}
+
 header .sub_header_container .mode_icon button img {
   filter: invert(1);
   transition: all 0.3s ease;
