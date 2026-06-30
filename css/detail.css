@@ -221,11 +221,11 @@
   gap: 60px;
 }
 
-.list_body .list_desc_group .list_desc div {
+.list_body .list_desc_group .list_desc dl {
   width: 50%;
 }
 
-.list_body .list_desc_group .list_desc div .meta_label {
+.list_body .list_desc_group .list_desc dl .meta_label {
   font-size: var(--font-size-lg);
   margin-bottom: 14px;
   border-bottom: 2px solid #eee;
@@ -234,7 +234,7 @@
   letter-spacing: 0.5px;
 }
 
-.list_body .list_desc_group .list_desc div p {
+.list_body .list_desc_group .list_desc dl p {
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-medium);
   color: var(--text-sub-color);
