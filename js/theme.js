@@ -32,7 +32,7 @@ function updateResponsiveImages(isDark) {
     if (!base) return;
 
     const themeSuffix = isDark ? "_dark" : "";
-    image.src = `${base}${getResponsiveImageSize()}${themeSuffix}.png`;
+    image.src = `${base}${getResponsiveImageSize()}${themeSuffix}.webp`;
   });
 }
 
@@ -84,7 +84,7 @@ window.addEventListener("resize", () => {
 // top 버튼 추가
 window.addEventListener("load", () => {
   const topBtn = document.createElement("button");
-  topBtn.innerHTML = `<img src="images/portfolio_arrow.png" alt="화살표" />`;
+  topBtn.innerHTML = `<img src="images/portfolio_arrow.webp" alt="화살표" />`;
   topBtn.className = "top-btn";
 
   document.body.appendChild(topBtn);

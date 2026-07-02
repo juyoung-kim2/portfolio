@@ -571,7 +571,7 @@
   .portfolio_item
   .circle_btn_wrap:before {
   content: "";
-  background: url(../images/card_corner.png) center center;
+  background: url(../images/card_corner.webp) center center;
   width: 20px;
   height: 20px;
   background-size: cover;
@@ -582,7 +582,7 @@
 
 .portfolio_section .portfolio_container .portfolio_item .circle_btn_wrap:after {
   content: "";
-  background: url(../images/card_corner.png) center center;
+  background: url(../images/card_corner.webp) center center;
   width: 20px;
   height: 20px;
   background-size: cover;
