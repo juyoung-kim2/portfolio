@@ -134,7 +134,7 @@ h3,
 }
 .top-btn img {
   transition: all 0.3s ease;
-  width: 12px;
+  width: 18px;
   filter: invert(1);
   opacity: 0.5;
 }
