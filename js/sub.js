@@ -39,4 +39,22 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
+
+  const animateEls = document.querySelectorAll(".animate");
+
+  if (animateEls.length) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target); // 한 번만 실행
+          }
+        });
+      },
+      { threshold: 0, rootMargin: "0px 0px -100px 0px" },
+    );
+
+    animateEls.forEach((el) => observer.observe(el));
+  }
 });
