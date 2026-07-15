@@ -4,6 +4,7 @@
   padding: 0 var(--padding-container);
   position: relative;
   overflow: hidden;
+  background: var(--bg-gradient);
 }
 .main_visual .floating_circle {
   width: 24vw;
@@ -399,7 +400,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  row-gap: 80px;
+  row-gap: 60px;
   width: 100%;
 }
 .portfolio_section .portfolio_container .portfolio_item {
@@ -408,6 +409,46 @@
   flex-direction: column;
   overflow: hidden;
   position: relative;
+  transition: transform 0.3s ease;
+}
+.portfolio_section .portfolio_container .portfolio_item:hover {
+  transform: translateY(-6px);
+}
+.portfolio_section
+  .portfolio_container
+  .portfolio_item:hover
+  .circle_btn_wrap
+  .circle_btn {
+  background-color: var(--hover-color);
+  transition: background-color 0.3s ease;
+  border-color: var(--hover-color);
+}
+.portfolio_section .portfolio_container .portfolio_item:first-child {
+  grid-column: 1 / -1;
+}
+.portfolio_section .portfolio_container .portfolio_item:first-child {
+  flex-direction: row;
+}
+.portfolio_section .portfolio_container .portfolio_item:first-child .img_wrap {
+  padding-top: 33%;
+  width: 45%;
+}
+
+.portfolio_section .portfolio_container .portfolio_item:first-child .text_wrap {
+  width: 55%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 50px;
+  padding-right: 70px;
+}
+.portfolio_section
+  .portfolio_container
+  .portfolio_item:first-child
+  .text_wrap
+  .skills {
+  display: flex;
 }
 .portfolio_section .portfolio_container .portfolio_item .img_wrap {
   padding-top: 75%;
@@ -427,7 +468,7 @@
 .portfolio_section .portfolio_container .portfolio_item .text_wrap {
   background: var(--box-color);
   padding: 30px;
-  padding-right: 100px;
+  padding-right: 90px;
   height: 100%;
 }
 .portfolio_section .portfolio_container .portfolio_item .text_wrap h4 {
@@ -440,6 +481,11 @@
   color: var(--text-sub-color);
   display: inline-block;
   font-size: 13px;
+}
+.portfolio_section .portfolio_container .portfolio_item .text_wrap p.desc {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  margin-top: 14px;
 }
 .portfolio_section .portfolio_container .portfolio_item .text_wrap .skill {
   color: var(--text-sub-color);

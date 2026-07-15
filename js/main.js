@@ -84,12 +84,53 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileNav = document.querySelector(".mobile_nav");
   const overlay = document.querySelector(".overlay");
 
+  mobileNav.inert = true;
   function setMenuState(isOpen) {
     mobileNav.classList.toggle("active", isOpen);
     overlay.classList.toggle("active", isOpen);
     hamOpen.setAttribute("aria-expanded", String(isOpen));
     document.body.style.overflow = isOpen ? "hidden" : "";
+    mobileNav.inert = !isOpen;
+
+    setTimeout(() => {
+      if (isOpen) {
+        hamClose.focus();
+      } else {
+        hamOpen.focus();
+      }
+    }, 50);
   }
+
+  if (hamOpen && hamClose && mobileNav && overlay) {
+    hamOpen.addEventListener("click", () => setMenuState(true));
+    hamClose.addEventListener("click", () => setMenuState(false));
+    overlay.addEventListener("click", () => setMenuState(false));
+  }
+
+  // 포커스 트랩
+  document.addEventListener("keydown", (e) => {
+    if (!mobileNav.classList.contains("active")) return;
+    const focusable = mobileNav.querySelectorAll(
+      'a, button, [tabindex]:not([tabindex="-1"])',
+    );
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+
+    if (e.key === "Tab") {
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+
+    // ESC로 닫기
+    if (e.key === "Escape" && mobileNav.classList.contains("active")) {
+      setMenuState(false);
+    }
+  });
 
   if (hamOpen && hamClose && mobileNav && overlay) {
     hamOpen.addEventListener("click", () => setMenuState(true));

@@ -47,6 +47,7 @@ img {
   --background-color: #ffffff;
   --text-color: #191919;
   --text-sub-color: #666666;
+  --bg-gradient: linear-gradient(160deg, #f9f7f2 0%, #f3ead8 100%);
 
   /*폰트*/
   --font-size-base: 16px;
