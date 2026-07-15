@@ -65,7 +65,9 @@
     <header class="header">
       <div class="header_container">
         <div class="header_logo">
-          <a href="index.html">Juyoung's portfolio</a>
+          <a href="index.html" aria-label="김주영의 포트폴리오"
+            >Juyoung's portfolio</a
+          >
         </div>
         <nav class="header_list" aria-label="메인 네비게이션">
           <ul>
@@ -154,7 +156,10 @@
     <main>
       <section class="main_visual">
         <div class="main_visual_wrap fade-in">
-          <h1 class="main_visual_title">
+          <h1
+            class="main_visual_title"
+            aria-label="김주영의 UI·UX DESIGN portfolio"
+          >
             <span class="visual_title_text">Juyoung's</span>
             <span class="change_words">
               <span class="word_box title-en">
@@ -181,7 +186,9 @@
             디자인 의도를 정확하게 구현하고,<br />
             사용자의 흐름을 고려한 웹 경험을 만듭니다.
           </p>
-          <p class="copy">© 2026 Juyoung Kim. All rights reserved.</p>
+          <p class="copy" aria-hidden="true">
+            © 2026 Juyoung Kim. All rights reserved.
+          </p>
         </div>
         <div class="floating_circle_wrap">
           <div class="floating_circle"></div>
@@ -211,34 +218,37 @@
               </p>
               <ul class="skill_group">
                 <li>
-                  <img src="images/icon_html.webp" alt="html이미지" />
+                  <img src="images/icon_html.webp" alt="html 이미지" />
                 </li>
                 <li>
-                  <img src="images/icon_css.webp" alt="css이미지" />
+                  <img src="images/icon_css.webp" alt="css 이미지" />
                 </li>
                 <li>
-                  <img src="images/icon_javascript.webp" alt="js이미지" />
+                  <img
+                    src="images/icon_javascript.webp"
+                    alt="자바스크립트 이미지"
+                  />
                 </li>
                 <li>
-                  <img src="images/icon_vscode.svg" alt="vscode이미지" />
+                  <img src="images/icon_vscode.svg" alt="vscode 이미지" />
                 </li>
                 <li>
-                  <img src="images/icon_Photoshop.svg" alt="photoshop이미지" />
+                  <img src="images/icon_Photoshop.svg" alt="photoshop 이미지" />
                 </li>
                 <li>
                   <img
                     src="images/icon_illustrator.webp"
-                    alt="illustrator이미지"
+                    alt="illustrator 이미지"
                   />
                 </li>
                 <li>
-                  <img src="images/icon_figma.webp" alt="Figma이미지" />
+                  <img src="images/icon_figma.webp" alt="Figma 이미지" />
                 </li>
                 <li class="filter-icon">
-                  <img src="images/icon_github.webp" alt="github이미지" />
+                  <img src="images/icon_github.webp" alt="github 이미지" />
                 </li>
                 <li class="filter-icon">
-                  <img src="images/icon_react.svg" alt="React이미지" />
+                  <img src="images/icon_react.svg" alt="React 이미지" />
                 </li>
               </ul>
             </div>
@@ -252,21 +262,32 @@
               디자인 의도와 사용성을 함께 고려해 구현한 웹 프로젝트 경험입니다.
             </p>
           </div>
+          <table class="company_info">
+            <caption class="blind">
+              경력 정보
+            </caption>
+            <thead class="info_title" aria-hidden="true">
+              <tr>
+                <th scope="col" class="date">근무일</th>
+                <th scope="col" class="name">회사명</th>
+                <th scope="col" class="grade">직급</th>
+                <th scope="col" class="job">담당업무</th>
+              </tr>
+            </thead>
+            <tbody class="info_content">
+              <tr>
+                <td class="date" aria-label="근무일">2022.06 ~ 2026.03</td>
+                <td class="name" aria-label="회사명">
+                  (주) 케이먼트코퍼레이션
+                </td>
+                <td class="grade" aria-label="직급">주임</td>
+                <td class="job" aria-label="담당업무">
+                  메인 UI 디자인 및 퍼블리싱
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-          <div class="conpany_info">
-            <ul class="info_title">
-              <li class="date">근무일</li>
-              <li class="name">회사명</li>
-              <li class="grade">직급</li>
-              <li class="job">담당업무</li>
-            </ul>
-            <ul class="info_content">
-              <li class="date">2022.06 ~ 2026.03</li>
-              <li class="name">(주) 케이먼트코퍼레이션</li>
-              <li class="grade">주임</li>
-              <li class="job">메인 UI 디자인 및 퍼블리싱</li>
-            </ul>
-          </div>
           <div class="career_wrap">
             <div class="line"></div>
 
@@ -294,7 +315,7 @@
                     <li>- 전 페이지 퍼블리싱 담당 (HTML, CSS, JavaScript)</li>
                   </ul>
                 </div>
-                <button class="more_btn" aria-label="더보기">
+                <button class="more_btn" aria-label="2026년 경력 더보기">
                   <span class="text">더보기</span
                   ><img src="images/more_arrow.svg" alt="" />
                 </button>
@@ -392,7 +413,7 @@
                   </ul>
                 </div>
               </div>
-              <button class="more_btn" aria-label="더보기">
+              <button class="more_btn" aria-label="2025년 경력 더보기">
                 <span class="text">더보기</span
                 ><img src="images/more_arrow.svg" alt="" />
               </button>
@@ -450,7 +471,7 @@
                   </ul>
                 </div>
               </div>
-              <button class="more_btn" aria-label="더보기">
+              <button class="more_btn" aria-label="2024년 경력 더보기">
                 <span class="text">더보기</span
                 ><img src="images/more_arrow.svg" alt="" />
               </button>
@@ -484,7 +505,7 @@
                   </ul>
                 </div>
               </div>
-              <button class="more_btn" aria-label="더보기">
+              <button class="more_btn" aria-label="2023년 경력 더보기">
                 <span class="text">더보기</span
                 ><img src="images/more_arrow.svg" alt="" />
               </button>
@@ -500,12 +521,13 @@
 
         <div class="portfolio_container">
           <!--리스트0 추가-->
-          <a href="list7.html" class="portfolio_item">
+          <a
+            href="list7.html"
+            class="portfolio_item"
+            aria-label="개인 포트폴리오 사이트 상세 보기"
+          >
             <div class="img_wrap">
-              <img
-                src="images/list/portfolio_list.webp"
-                alt="포트폴리오 사이트 디자인 썸네일"
-              />
+              <img src="images/list/portfolio_list.webp" alt="" />
             </div>
             <div class="text_wrap">
               <h4>개인 포트폴리오 사이트</h4>
@@ -524,18 +546,19 @@
             </div>
             <div class="circle_btn_wrap">
               <div class="circle_btn">
-                <img src="images/portfolio_arrow.webp" alt="화살표" />
+                <img src="images/portfolio_arrow.webp" alt="" />
               </div>
             </div>
           </a>
 
           <!--리스트1-->
-          <a href="list5.html" class="portfolio_item">
+          <a
+            href="list5.html"
+            class="portfolio_item"
+            aria-label="회사 erp 시스템 디자인 상세 보기"
+          >
             <div class="img_wrap">
-              <img
-                src="images/list/erp_list.webp"
-                alt="회사 ERP 시스템 디자인 썸네일"
-              />
+              <img src="images/list/erp_list.webp" alt="" />
             </div>
             <div class="text_wrap">
               <h4>사내 ERP 시스템 디자인</h4>
@@ -548,18 +571,19 @@
             </div>
             <div class="circle_btn_wrap">
               <div class="circle_btn">
-                <img src="images/portfolio_arrow.webp" alt="화살표" />
+                <img src="images/portfolio_arrow.webp" alt="" />
               </div>
             </div>
           </a>
 
           <!--리스트2-->
-          <a class="portfolio_item" href="list2.html">
+          <a
+            class="portfolio_item"
+            href="list2.html"
+            aria-label="페인트샵 쇼핑몰 리뉴얼 상세 보기"
+          >
             <div class="img_wrap">
-              <img
-                src="images/list/osung_list.webp"
-                alt="페인트샵 쇼핑몰 리뉴얼 썸네일"
-              />
+              <img src="images/list/osung_list.webp" alt="" />
             </div>
             <div class="text_wrap">
               <h4>페인트샵 쇼핑몰 리뉴얼</h4>
@@ -572,18 +596,19 @@
             </div>
             <div class="circle_btn_wrap">
               <div class="circle_btn">
-                <img src="images/portfolio_arrow.webp" alt="화살표" />
+                <img src="images/portfolio_arrow.webp" alt="" />
               </div>
             </div>
           </a>
 
           <!--리스트3-->
-          <a class="portfolio_item" href="list3.html">
+          <a
+            class="portfolio_item"
+            href="list3.html"
+            aria-label="파이드 쇼핑몰 리뉴얼 상세 보기"
+          >
             <div class="img_wrap">
-              <img
-                src="images/list/fied_list.webp"
-                alt="파이드 쇼핑몰 리뉴얼 썸네일"
-              />
+              <img src="images/list/fied_list.webp" alt="" />
             </div>
             <div class="text_wrap">
               <h4>파이드 쇼핑몰 리뉴얼</h4>
@@ -596,18 +621,19 @@
             </div>
             <div class="circle_btn_wrap">
               <div class="circle_btn">
-                <img src="images/portfolio_arrow.webp" alt="화살표" />
+                <img src="images/portfolio_arrow.webp" alt="" />
               </div>
             </div>
           </a>
 
           <!--리스트4-->
-          <a class="portfolio_item" href="list1.html">
+          <a
+            class="portfolio_item"
+            href="list1.html"
+            aria-label="아모스아인스 쇼핑몰 리뉴얼 상세 보기"
+          >
             <div class="img_wrap">
-              <img
-                src="images/list/amos_list.webp"
-                alt="아모스아인스 쇼핑몰 리뉴얼 썸네일"
-              />
+              <img src="images/list/amos_list.webp" alt="" />
             </div>
             <div class="text_wrap">
               <h4>아모스아인스 쇼핑몰 리뉴얼</h4>
@@ -620,18 +646,19 @@
             </div>
             <div class="circle_btn_wrap">
               <div class="circle_btn">
-                <img src="images/portfolio_arrow.webp" alt="화살표" />
+                <img src="images/portfolio_arrow.webp" alt="" />
               </div>
             </div>
           </a>
 
           <!--리스트5-->
-          <a class="portfolio_item" href="list4.html">
+          <a
+            class="portfolio_item"
+            href="list4.html"
+            aria-label="오프앤온 쇼핑몰 신규 구축 상세 보기"
+          >
             <div class="img_wrap">
-              <img
-                src="images/list/offnon_list.webp"
-                alt="오프앤온 쇼핑몰 신규 구축 썸네일"
-              />
+              <img src="images/list/offnon_list.webp" alt="" />
             </div>
             <div class="text_wrap">
               <h4>오프앤온 쇼핑몰 신규 구축</h4>
@@ -644,18 +671,19 @@
             </div>
             <div class="circle_btn_wrap">
               <div class="circle_btn">
-                <img src="images/portfolio_arrow.webp" alt="화살표" />
+                <img src="images/portfolio_arrow.webp" alt="" />
               </div>
             </div>
           </a>
 
           <!--리스트6-->
-          <a class="portfolio_item" href="list6.html">
+          <a
+            class="portfolio_item"
+            href="list6.html"
+            aria-label="개인 프로젝트 Palette Cake Studio 상세 보기"
+          >
             <div class="img_wrap">
-              <img
-                src="images/list/palette_list.webp"
-                alt="Palette Cake Studio 썸네일"
-              />
+              <img src="images/list/palette_list.webp" alt="" />
             </div>
             <div class="text_wrap">
               <h4>Palette Cake Studio</h4>
@@ -669,7 +697,7 @@
             </div>
             <div class="circle_btn_wrap">
               <div class="circle_btn">
-                <img src="images/portfolio_arrow.webp" alt="화살표" />
+                <img src="images/portfolio_arrow.webp" alt="" />
               </div>
             </div>
           </a>

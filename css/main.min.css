@@ -225,36 +225,41 @@
   color: var(--text-sub-color);
   font-weight: var(--font-weight-medium);
 }
-.about_section .career_container .conpany_info {
+.about_section .career_container .company_info {
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   text-align: center;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
-.about_section .career_container .conpany_info .info_title {
-  padding: 14px 0;
-  display: flex;
-  align-items: center;
+.about_section .career_container .company_info .info_title {
   font-weight: var(--font-weight-semibold);
   border-bottom: 1px solid #ddd;
   background-color: var(--box-color);
 }
-.about_section .career_container .conpany_info ul .date {
-  width: 20%;
-}
-.about_section .career_container .conpany_info ul .name {
-  width: 30%;
-}
-.about_section .career_container .conpany_info ul .grade {
-  width: 20%;
-}
-.about_section .career_container .conpany_info ul .job {
-  width: 30%;
-}
-.about_section .career_container .conpany_info .info_content {
-  padding: 30px 0;
-  display: flex;
+.about_section .career_container .company_info .info_title th {
+  padding: 14px 0;
   align-items: center;
+}
+.about_section .career_container .company_info .date {
+  width: 20%;
+}
+.about_section .career_container .company_info .name {
+  width: 30%;
+}
+.about_section .career_container .company_info .grade {
+  width: 20%;
+}
+.about_section .career_container .company_info .job {
+  width: 30%;
+}
+.about_section .career_container .company_info .info_content {
   font-weight: var(--font-weight-medium);
+}
+.about_section .career_container .company_info .info_content td {
+  padding: 30px 0;
+  align-items: center;
 }
 .about_section .career_container .career_wrap {
   margin-top: 80px;

@@ -57,6 +57,8 @@ document.addEventListener("DOMContentLoaded", () => {
     items.forEach((item, index) => {
       if (index < 2) {
         item.classList.add("show");
+      } else {
+        item.setAttribute("aria-hidden", "true");
       }
     });
 
@@ -66,10 +68,18 @@ document.addEventListener("DOMContentLoaded", () => {
       items.forEach((item, index) => {
         if (isExpanded) {
           item.classList.add("show");
+          item.removeAttribute("aria-hidden");
         } else {
           item.classList.toggle("show", index < 2);
+          if (index >= 2) item.setAttribute("aria-hidden", "true");
         }
       });
+
+      if (isExpanded) {
+        // 펼쳤을 때 첫 번째 새 항목으로 포커스 이동
+        items[2].setAttribute("tabindex", "-1");
+        items[2].focus();
+      }
 
       if (textEl) {
         textEl.textContent = isExpanded ? "접기" : "더보기";

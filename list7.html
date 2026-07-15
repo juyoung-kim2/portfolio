@@ -57,6 +57,7 @@
       .list_visual .move_arrow img {
         filter: invert(0);
       }
+      .main_visual .main_visual_wrap .main_visual_title {z-index: 10;}
     </style>
   </head>
 
@@ -64,8 +65,11 @@
     <header class="header" id="header"></header>
     <main>
       <section class="list_visual main_visual">
-        <div class="main_visual_wrap">
-          <h1 class="main_visual_title">
+         <div class="main_visual_wrap fade-in">
+          <h1
+            class="main_visual_title"
+            aria-label="김주영의 UI·UX DESIGN portfolio"
+          >
             <span class="visual_title_text">Juyoung's</span>
             <span class="change_words">
               <span class="word_box title-en">
@@ -88,7 +92,6 @@
             </span>
             <span class="visual_title_text">portfolio</span>
           </h1>
-        </div>
         <div class="floating_circle_wrap">
           <div class="floating_circle"></div>
         </div>
