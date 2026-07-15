@@ -84,7 +84,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileNav = document.querySelector(".mobile_nav");
   const overlay = document.querySelector(".overlay");
 
-  mobileNav.inert = true;
+  if (mobileNav) mobileNav.inert = true;
+
   function setMenuState(isOpen) {
     mobileNav.classList.toggle("active", isOpen);
     overlay.classList.toggle("active", isOpen);
@@ -99,12 +100,6 @@ document.addEventListener("DOMContentLoaded", () => {
         hamOpen.focus();
       }
     }, 50);
-  }
-
-  if (hamOpen && hamClose && mobileNav && overlay) {
-    hamOpen.addEventListener("click", () => setMenuState(true));
-    hamClose.addEventListener("click", () => setMenuState(false));
-    overlay.addEventListener("click", () => setMenuState(false));
   }
 
   // 포커스 트랩

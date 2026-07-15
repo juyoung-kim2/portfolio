@@ -3,7 +3,6 @@ const DARK_MODE_CLASS = "dark-mode";
 
 function getPreferredTheme() {
   const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
-  console.log(savedTheme);
   if (savedTheme === "dark" || savedTheme === "light") {
     return savedTheme;
   }
@@ -88,6 +87,7 @@ window.addEventListener("load", () => {
   topBtn.className = "top-btn";
 
   document.body.appendChild(topBtn);
+  topBtn.setAttribute("aria-label", "맨 위로 이동");
 
   window.addEventListener("scroll", () => {
     if (window.scrollY > 300) {
