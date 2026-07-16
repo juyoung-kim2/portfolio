@@ -16,13 +16,13 @@
     <link
       rel="icon"
       type="image/png"
-      href="images/favicon-32x32.webp"
+      href="images/favicon-32x32.png"
       sizes="32x32"
     />
     <link
       rel="icon"
       type="image/png"
-      href="images/favicon-16x16.webp"
+      href="images/favicon-16x16.png"
       sizes="16x16"
     />
     <link
@@ -57,7 +57,9 @@
       .list_visual .move_arrow img {
         filter: invert(0);
       }
-      .main_visual .main_visual_wrap .main_visual_title {z-index: 10;}
+      .main_visual .main_visual_wrap .main_visual_title {
+        z-index: 10;
+      }
     </style>
   </head>
 
@@ -65,7 +67,7 @@
     <header class="header" id="header"></header>
     <main>
       <section class="list_visual main_visual">
-         <div class="main_visual_wrap fade-in">
+        <div class="main_visual_wrap fade-in">
           <h1
             class="main_visual_title"
             aria-label="김주영의 UI·UX DESIGN portfolio"
@@ -92,6 +94,7 @@
             </span>
             <span class="visual_title_text">portfolio</span>
           </h1>
+        </div>
         <div class="floating_circle_wrap">
           <div class="floating_circle"></div>
         </div>
@@ -153,14 +156,16 @@
             src="images/list/portfolio_capture01_1920.webp"
             data-base="images/list/portfolio_capture01"
             class="dark-switch responsive-img animate"
-            alt="포트폴리오 메인 비주얼 화면"
+            alt="포트폴리오 웹접근성 검사 결과 화면"
+            loading="lazy"
           />
 
           <img
             src="images/list/portfolio_capture02_1920.webp"
             data-base="images/list/portfolio_capture02"
             class="dark-switch responsive-img animate"
-            alt="포트폴리오 세부 페이지 화면"
+            alt="포트폴리오 구현 포인트 화면"
+            loading="lazy"
           />
         </div>
         <div class="fix_bar">

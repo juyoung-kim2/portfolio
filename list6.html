@@ -15,13 +15,13 @@
     <link
       rel="icon"
       type="image/png"
-      href="images/favicon-32x32.webp"
+      href="images/favicon-32x32.png"
       sizes="32x32"
     />
     <link
       rel="icon"
       type="image/png"
-      href="images/favicon-16x16.webp"
+      href="images/favicon-16x16.png"
       sizes="16x16"
     />
 
@@ -132,6 +132,7 @@
               target="_blank"
               rel="noopener noreferrer"
               class="more_btn"
+              aria-label="개인 프로젝트 팔레트 피그마 보기 (새 창에서 열림)"
             >
               <span class="text">피그마 링크</span
               ><img src="images/go_arrow.svg" alt="" />
@@ -141,6 +142,7 @@
               target="_blank"
               rel="noopener noreferrer"
               class="more_btn"
+              aria-label="개인 프로젝트 팔레트 사이트 보기 (새 창에서 열림)"
             >
               <span class="text">사이트 보기</span
               ><img src="images/go_arrow.svg" alt="" />
@@ -150,6 +152,7 @@
               target="_blank"
               rel="noopener noreferrer"
               class="more_btn more_btn_bk"
+              aria-label="개인 프로젝트 팔레트 노션 정리 보기 (새 창에서 열림)"
             >
               <span class="text">프로젝트 노션 정리</span
               ><img src="images/go_arrow.svg" alt="" />
@@ -162,12 +165,14 @@
             data-base="images/list/palette_capture01"
             class="dark-switch responsive-img animate"
             alt="팔레트 케이크 모바일 페이지 화면"
+            loading="lazy"
           />
           <img
             src="images/list/palette_capture02_1920.webp"
             data-base="images/list/palette_capture02"
             class="dark-switch responsive-img animate"
             alt="팔레트 케이크 페이지 화면"
+            loading="lazy"
           />
         </div>
         <div class="fix_bar">
@@ -178,6 +183,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 class="more_btn"
+                aria-label="개인 프로젝트 팔레트 사이트 보기 (새 창에서 열림)"
               >
                 <span class="text">사이트 보기</span
                 ><img src="images/go_arrow.svg" alt="" />
@@ -185,7 +191,9 @@
             </div>
 
             <div class="right_wrap">
-              <div class="prev_btn"><a href="list4.html">PREV</a></div>
+              <div class="prev_btn">
+                <a href="list4.html" aria-label="이전 프로젝트 보기">PREV</a>
+              </div>
               <div class="list_btn">
                 <a href="index.html" aria-label="포트폴리오 목록으로 돌아가기">
                   <span class="bar"></span>
