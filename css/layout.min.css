@@ -669,7 +669,7 @@ footer {
     padding-left: 60px;
     padding-right: 20px;
   }
-  #main header .header_container .mode_icon > button {
+  header .header_container .mode_icon > button {
     display: none;
   }
   .main_visual .main_visual_wrap .main_visual_title .change_words {
@@ -734,4 +734,13 @@ footer {
     transform: none;
     transition: none;
   }
+}
+
+/*건너뛰기*/
+.skip_nav {
+  position: absolute;
+  top: -100%;
+}
+.skip_nav:focus {
+  top: 0;
 }
