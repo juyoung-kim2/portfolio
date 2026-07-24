@@ -4,26 +4,66 @@
   position: fixed;
   top: 0;
   right: 0;
-  background: #000;
+  background: #161616;
+  background-size: contain;
+  background-position: center bottom;
+  background-repeat: no-repeat;
 }
 .list_visual:after {
   content: "";
   display: block;
   width: 100%;
   height: 100%;
-  background: rgb(0 0 0 / 0.5);
+  background: rgb(0 0 0 / 0);
   position: absolute;
   top: 0;
   left: 0;
 }
 .list_visual > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  display: none;
+}
+/* 각 페이지별 배경 이미지 */
+.amos-visual {
+  background-image: url("../images/list/amos_list_top.webp");
+}
+.osung-visual {
+  background-image: url("../images/list/osung_list_top.webp");
+}
+.fied-visual {
+  background-image: url("../images/list/fied_list_top.webp");
+}
+.offnon-visual {
+  background-image: url("../images/list/offnon_list_top.webp");
+}
+.erp-visual {
+  background-image: url("../images/list/erp_list_top.webp");
+}
+.palette-visual {
+  background-image: url("../images/list/palette_list_top.webp");
+}
+.portfolio-visual {
+  background-image: url("../images/list/portfolio_list_top.webp");
+}
+
+@media (max-width: 1200px) {
+  .amos-visual { background-image: url("../images/list/amos_list_top_1200.webp"); }
+  .osung-visual { background-image: url("../images/list/osung_list_top_1200.webp"); }
+  .fied-visual { background-image: url("../images/list/fied_list_top_1200.webp"); }
+  .offnon-visual { background-image: url("../images/list/offnon_list_top_1200.webp"); }
+  .erp-visual { background-image: url("../images/list/erp_list_top_1200.webp"); }
+  .palette-visual { background-image: url("../images/list/palette_list_top_1200.webp"); }
+}
+@media (max-width: 750px) {
+  .amos-visual { background-image: url("../images/list/amos_list_top_750.webp"); }
+  .osung-visual { background-image: url("../images/list/osung_list_top_750.webp"); }
+  .fied-visual { background-image: url("../images/list/fied_list_top_750.webp"); }
+  .offnon-visual { background-image: url("../images/list/offnon_list_top_750.webp"); }
+  .erp-visual { background-image: url("../images/list/erp_list_top_750.webp"); }
+  .palette-visual { background-image: url("../images/list/palette_list_top_750.webp"); }
 }
 .list_visual .logo_wrap {
   position: absolute;
-  top: 50%;
+  top: 23%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
@@ -31,10 +71,13 @@
 .list_visual .logo_wrap h1 {
   font-family: var(--font-family);
   color: #fff;
-  font-size: 66px;
-  letter-spacing: 1em;
+  font-size: 60px;
+  letter-spacing: 0.4em;
+  text-indent: 0.4em;
   opacity: 0;
   animation: fadeUp 1.3s ease forwards;
+  line-height: 1.2;
+  text-align: center;
 }
 @keyframes fadeUp {
   from {
@@ -51,7 +94,7 @@
 }
 .list_visual .move_arrow {
   position: absolute;
-  left: 50%;
+  right: 3%;
   bottom: 40px;
   transform: translateX(-50%) rotate(180deg);
   z-index: 10;

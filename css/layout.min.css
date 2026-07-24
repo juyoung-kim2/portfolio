@@ -449,8 +449,8 @@ footer {
   .list_visual .logo_wrap h1 {
     font-size: 5.5vw;
     text-align: center;
-    letter-spacing: 0.8em;
-    text-indent: 0.8em;
+    letter-spacing: 0.4em;
+    text-indent: 0.4em;
   }
 }
 @media (max-width: 1000px) {
@@ -743,4 +743,29 @@ footer {
 }
 .skip_nav:focus {
   top: 0;
+}
+
+@media (max-width: 1200px) {
+  .list_visual > img.pc-only {
+    display: none;
+  }
+  .list_visual > img.tablet-only {
+    display: block;
+  }
+}
+@media (max-width: 750px) {
+  .list_visual > img.tablet-only {
+    display: none;
+  }
+  .list_visual > img.mo-only {
+    display: block;
+  }
+}
+@media (min-width: 1201px) {
+  .list_visual > img.tablet-only {
+    display: none;
+  }
+  .list_visual > img.mo-only {
+    display: none;
+  }
 }
