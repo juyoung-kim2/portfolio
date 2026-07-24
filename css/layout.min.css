@@ -346,6 +346,7 @@ section .btn_group {
   display: flex;
   align-items: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 section .more_btn {
   padding: 15px 26px;
@@ -684,7 +685,6 @@ footer {
   section .btn_group {
     align-items: flex-start;
     gap: 12px;
-    flex-wrap: wrap;
   }
   section .more_btn {
     padding: 14px 16px;
