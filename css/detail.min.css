@@ -306,6 +306,14 @@
 .list_body .main_shot img {
   width: 100%;
 }
+.list_body .main_shot .video_wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.list_body .main_shot .video_wrap video {
+  max-width: 100%;
+}
 .list_body .list_desc_group .desc > div ul li .highlight {
   background: linear-gradient(transparent 0%, #e8c66a70 100%);
 }
