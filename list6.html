@@ -116,10 +116,12 @@
                 <li>
                   <span class="highlight">html2canvas</span>로 케이크 이미지
                   캡처 후 장바구니/결제 연동
+                  <button class="code_btn" data-code="html2canvas">코드 보기</button>
                 </li>
                 <li>
                   localStorage 용량 초과
                   <span class="highlight">try-catch 예외 처리</span>
+                  <button class="code_btn" data-code="localStorage">코드 보기</button>
                 </li>
                 <li>React 컴포넌트 기반 UI 구성</li>
               </ul>
@@ -244,8 +246,105 @@
     <footer>
       <p>© 2026 Juyoung Kim. All rights reserved.</p>
     </footer>
+    <!-- 코드 팝업 모달 -->
+    <div class="code_modal_overlay" id="codeModalOverlay" role="dialog" aria-modal="true" aria-labelledby="codeModalTitle">
+      <div class="code_modal">
+        <div class="code_modal_header">
+          <span class="code_modal_title" id="codeModalTitle"></span>
+          <button class="code_modal_close" id="codeModalClose" aria-label="닫기">✕</button>
+        </div>
+        <pre><code class="language-javascript" id="codeModalContent"></code></pre>
+      </div>
+    </div>
+
     <script src="./js/theme.js"></script>
     <script src="./js/load-header.js" defer></script>
     <script src="./js/sub.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+      const codeSnippets = {
+        html2canvas: {
+          title: 'html2canvas로 케이크 이미지 캡처',
+          code: `const handleOrder = async () => {
+  // 현재 케이크 DOM을 캔버스로 캡처
+  const canvas = await html2canvas(cakeRef.current, { scale: 0.9 });
+  const imgData = canvas.toDataURL("image/jpeg", 0.8);
+
+  const finalOrder = {
+    id: Date.now(),
+    sheetName: allOptions[selectedSheet]?.name,
+    creamName: allOptions[selectedCream]?.name,
+    selectedDeco: Object.entries(decoCounts)
+      .filter(([, count]) => count > 0)
+      .map(([id, count]) => ({
+        id, name: allOptions[id]?.name, count,
+      })),
+    lettering: lettering,
+    totalAmount: totalPrice,
+    cakeImage: imgData, // 캡처 이미지를 주문 데이터에 포함
+  };
+
+  try {
+    const existingCart = JSON.parse(localStorage.getItem("cartData")) || [];
+    const updatedCart = [...existingCart, finalOrder];
+    localStorage.setItem("cartData", JSON.stringify(updatedCart));
+    navigate("/cart");
+  } catch (e) {
+    alert("저장 공간이 부족합니다. 마이페이지에서 이전 주문내역을 정리 후 다시 시도해주세요.");
+  }
+};`
+        },
+        localStorage: {
+          title: 'localStorage 용량 초과 예외 처리',
+          code: `// localStorage.setItem()은 용량 초과 시 QuotaExceededError를 던짐
+// try-catch로 감싸 사용자에게 명확한 안내 제공
+
+try {
+  const existingCart = JSON.parse(localStorage.getItem("cartData")) || [];
+  const updatedCart = [...existingCart, finalOrder];
+  localStorage.setItem("cartData", JSON.stringify(updatedCart));
+  navigate("/cart");
+  alert("장바구니에 상품을 담았습니다 :)");
+} catch (e) {
+  console.error("장바구니 저장 실패:", e);
+  alert(
+    "저장 공간이 부족합니다. 마이페이지에서 이전 주문내역을 정리한 후 다시 시도해주세요."
+  );
+}`
+        }
+      };
+
+      const overlay = document.getElementById('codeModalOverlay');
+      const closeBtn = document.getElementById('codeModalClose');
+      const titleEl = document.getElementById('codeModalTitle');
+      const codeEl = document.getElementById('codeModalContent');
+
+      document.querySelectorAll('.code_btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const key = btn.dataset.code;
+          const snippet = codeSnippets[key];
+          titleEl.textContent = snippet.title;
+          codeEl.removeAttribute('data-highlighted');
+          codeEl.textContent = snippet.code;
+          hljs.highlightElement(codeEl);
+          overlay.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      closeBtn.addEventListener('click', closeModal);
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) closeModal();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+      });
+
+      function closeModal() {
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    </script>
   </body>
 </html>
