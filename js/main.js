@@ -174,6 +174,32 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // 포트폴리오 스크롤 시 왼쪽 텍스트 업데이트
+  const portfolioItems = document.querySelectorAll(".portfolio_item");
+  const leftTextWrap = document.querySelector(".portfolio_title .text_wrap");
+
+  if (portfolioItems.length && leftTextWrap && window.innerWidth > 900) {
+    const portfolioObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const textWrap = entry.target.querySelector(".text_wrap");
+            if (textWrap) {
+              leftTextWrap.style.opacity = "0";
+              setTimeout(() => {
+                leftTextWrap.innerHTML = textWrap.innerHTML;
+                leftTextWrap.style.opacity = "1";
+              }, 200);
+            }
+          }
+        });
+      },
+      { threshold: 1 },
+    );
+
+    portfolioItems.forEach((item) => portfolioObserver.observe(item));
+  }
+
   const animateEls = document.querySelectorAll(".animate");
 
   if (animateEls.length) {
